@@ -1,0 +1,83 @@
+---
+name: Test request
+description: Subsystem lead submits an engineering test for screening and individual
+  approval.
+title: "[TEST] "
+labels:
+- test-request
+body:
+- type: markdown
+  attributes:
+    value: Subsystem leads formally initiate requests. Submission ≠ approval; leadership
+      approval ≠ resource commitment, readiness or execution clearance. State physical
+      needs; detailed instrumentation design follows screening. Timing is requested,
+      never a booking.
+- type: input
+  id: subsystem
+  attributes:
+    label: Requesting subsystem and lead
+    description: Name the responsible subsystem lead.
+  validations:
+    required: true
+- type: dropdown
+  id: purpose
+  attributes:
+    label: Test purpose
+    options:
+    - Verification
+    - Validation
+    - Characterization
+    - Comparison
+    - Diagnostics
+    - Durability
+    - Integration
+    - Other
+  validations:
+    required: true
+- type: textarea
+  id: question
+  attributes:
+    label: Engineering question
+    description: A definite question; exploratory work does not need a forced hypothesis.
+  validations:
+    required: true
+- type: textarea
+  id: measurements
+  attributes:
+    label: Physical measurements and expected outputs
+    description: Describe physical quantities, operating conditions and outputs; do
+      not invent sensor specifications.
+  validations:
+    required: true
+- type: textarea
+  id: decision
+  attributes:
+    label: Intended engineering decision and sufficient evidence
+    description: What decision will change? What evidence would answer the question?
+      Include justified acceptance criteria if appropriate, or say they need owner
+      definition.
+  validations:
+    required: true
+- type: textarea
+  id: consequences
+  attributes:
+    label: Consequences of not testing
+  validations:
+    required: true
+- type: input
+  id: requirements
+  attributes:
+    label: Requirement IDs and references
+    description: Optional DVP&R IDs, calculations or design links.
+- type: input
+  id: timing
+  attributes:
+    label: Requested and last useful timing
+    description: Optional preferred date, latest useful date and reason; unknown is
+      acceptable.
+- type: textarea
+  id: context
+  attributes:
+    label: Known hazards, constraints and context
+    description: Optional; technical complexity and operational safety risk are assessed
+      separately.

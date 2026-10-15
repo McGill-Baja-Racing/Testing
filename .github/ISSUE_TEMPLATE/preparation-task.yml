@@ -1,0 +1,63 @@
+---
+name: Preparation task
+description: Linked medium/high effort preparation with explicit resource-owner commitment.
+title: "[PREP] "
+labels:
+- preparation
+body:
+- type: markdown
+  attributes:
+    value: Use for medium/high effort work. Filing or assigning this issue does not
+      commit resources. Resource manager must acknowledge scope, capacity, owner and
+      dates on the parent gate record. Low effort can stay a checklist.
+- type: input
+  id: parent
+  attributes:
+    label: Parent test issue and stable test ID
+  validations:
+    required: true
+- type: input
+  id: resource
+  attributes:
+    label: Resource team, resource manager and work owner
+  validations:
+    required: true
+- type: textarea
+  id: scope
+  attributes:
+    label: Work scope and deliverable
+    description: Describe boundaries and observable completion evidence.
+  validations:
+    required: true
+- type: textarea
+  id: dependencies
+  attributes:
+    label: Dependencies
+    description: Link blocking work, equipment and approvals; write none if none.
+  validations:
+    required: true
+- type: dropdown
+  id: effort
+  attributes:
+    label: Preparation effort
+    options:
+    - Medium
+    - High
+  validations:
+    required: true
+- type: textarea
+  id: estimate
+  attributes:
+    label: Estimate, capacity and dates
+    description: Owner estimate/range, availability and proposed due date; uncommitted
+      until manager acknowledges.
+  validations:
+    required: true
+- type: textarea
+  id: evidence
+  attributes:
+    label: Readiness evidence required
+    description: Calibration/install/verification references and acceptance checks.
+      State what will be supplied, then link actual evidence at completion.
+  validations:
+    required: true

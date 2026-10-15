@@ -1,0 +1,37 @@
+[
+  {
+    "name": "test-request",
+    "color": "1D76DB",
+    "description": "Parent engineering test request; no approval implied"
+  },
+  {
+    "name": "preparation",
+    "color": "5319E7",
+    "description": "Linked medium/high preparation work"
+  },
+  {
+    "name": "needs-clarification",
+    "color": "FBCA04",
+    "description": "Specific requester clarification required"
+  },
+  {
+    "name": "deferred",
+    "color": "D4C5F9",
+    "description": "Decision recorded in parent issue"
+  },
+  {
+    "name": "declined",
+    "color": "B60205",
+    "description": "Value decision declined; see record"
+  },
+  {
+    "name": "cancelled",
+    "color": "CCCCCC",
+    "description": "Cancelled with documented disposition"
+  },
+  {
+    "name": "demo",
+    "color": "0E8A16",
+    "description": "Fictional pilot exercise; never real authorization"
+  }
+]

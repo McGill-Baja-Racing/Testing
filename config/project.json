@@ -1,0 +1,188 @@
+{
+  "pilot_only": true,
+  "project_name": "Testing Management",
+  "fields": [
+    {
+      "name": "Status",
+      "type": "single_select",
+      "options": [
+        "Submitted",
+        "Screening",
+        "Awaiting Approval",
+        "Awaiting Capacity",
+        "Preparing",
+        "Ready",
+        "Scheduled",
+        "Executed",
+        "Analyzing",
+        "Closed"
+      ],
+      "owner": "Testing Manager; reflects evidence, never grants authority"
+    },
+    {
+      "name": "Disposition",
+      "type": "single_select",
+      "options": [
+        "Active",
+        "Clarification",
+        "Deferred",
+        "Declined",
+        "Cancelled"
+      ],
+      "owner": "Testing Manager records documented decisions"
+    },
+    {
+      "name": "Work type",
+      "type": "single_select",
+      "options": [
+        "Test",
+        "Preparation"
+      ],
+      "owner": "Testing Manager"
+    },
+    {
+      "name": "Subsystem",
+      "type": "single_select",
+      "options": [
+        "Drivetrain",
+        "Suspension",
+        "Brakes",
+        "Electronics",
+        "Vehicle integration",
+        "Other"
+      ],
+      "owner": "Requesting lead; options confirmed on rollout"
+    },
+    {
+      "name": "Priority",
+      "type": "single_select",
+      "options": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "owner": "Leadership"
+    },
+    {
+      "name": "Preparation effort",
+      "type": "single_select",
+      "options": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "owner": "Resource owner screening"
+    },
+    {
+      "name": "Instrumentation category",
+      "type": "single_select",
+      "options": [
+        "Ready",
+        "Existing needs adaptation",
+        "New development",
+        "Unknown feasibility",
+        "No instrumentation support"
+      ],
+      "owner": "Instrumentation owner"
+    },
+    {
+      "name": "Resource team",
+      "type": "text",
+      "owner": "Resource managers; one task per team when needed"
+    },
+    {
+      "name": "Test ID",
+      "type": "text",
+      "owner": "Testing Manager allocation"
+    },
+    {
+      "name": "Parent test",
+      "type": "text",
+      "owner": "Preparation work owner; full parent issue URL"
+    },
+    {
+      "name": "Requirement IDs",
+      "type": "text",
+      "owner": "Subsystem lead; DVP&R remains canonical"
+    },
+    {
+      "name": "Test Lead",
+      "type": "text",
+      "owner": "Testing Manager"
+    },
+    {
+      "name": "Instrumentation owner",
+      "type": "text",
+      "owner": "Resource manager"
+    },
+    {
+      "name": "Analysis owner",
+      "type": "text",
+      "owner": "Subsystem lead"
+    },
+    {
+      "name": "Prep due",
+      "type": "date",
+      "owner": "Committed work owner + manager"
+    },
+    {
+      "name": "Target test date",
+      "type": "date",
+      "owner": "Testing Manager; tentative before confirmed schedule"
+    },
+    {
+      "name": "Test day",
+      "type": "text",
+      "owner": "Testing Manager; explicit day ID"
+    },
+    {
+      "name": "Analysis due",
+      "type": "date",
+      "owner": "Analysis owner + subsystem lead, during planning"
+    },
+    {
+      "name": "Gate record",
+      "type": "text",
+      "owner": "Testing Manager; parent issue comment URL"
+    }
+  ],
+  "views": [
+    {
+      "name": "Pipeline",
+      "layout": "board",
+      "filter": "\"Work type\":Test Disposition:Active",
+      "group_by": "Status"
+    },
+    {
+      "name": "Preparation workload",
+      "layout": "table",
+      "filter": "\"Work type\":Preparation Disposition:Active",
+      "group_by": "Resource team",
+      "sort_by": "Prep due",
+      "note": "Keep all active tasks visible, including blocked work. Inspect manager commitments and capacity in parent records."
+    },
+    {
+      "name": "Next testing day",
+      "layout": "table",
+      "filter": "\"Work type\":Test Disposition:Active status:Ready,Scheduled",
+      "group_by": "Test day",
+      "sort_by": "Target test date",
+      "note": "Select one explicit test-day ID to review a single day; Ready is not booked until Scheduled."
+    },
+    {
+      "name": "Analysis & closure",
+      "layout": "table",
+      "filter": "\"Work type\":Test Disposition:Active status:Executed,Analyzing",
+      "group_by": "Analysis owner",
+      "sort_by": "Analysis due"
+    },
+    {
+      "name": "Subsystem/DVP&R overview",
+      "layout": "table",
+      "filter": "\"Work type\":Test",
+      "group_by": "Subsystem",
+      "note": "Show Requirement IDs and links; Markdown DVP&R holds coverage/status including requirements with no issues."
+    }
+  ]
+}

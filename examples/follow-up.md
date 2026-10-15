@@ -1,0 +1,7 @@
+# DEMO follow-up request — pressure configuration correction and retest
+
+Hypothetical only; no actual invalid event occurred. Parent: [TST-DEMO-002](requests/brake-pressure.md). New test ID: TST-DEMO-004. Requirement: DEMO-VEH-05, remains unverified.
+
+Requesting subsystem/lead: Brakes — DEMO lead. Purpose: Diagnostics. Question: after correcting the scaling/configuration mismatch, can pressure traces support the original comparison? Measurements/outputs: pressure versus time, installed reference check and limitations. Decision/evidence: establish signal-chain validity before interpreting brake behavior; operating envelope and uncertainty require owner agreement. Consequence of not testing: unresolved pressure behavior and unsafe reliance on invalid evidence. Timing: requested DEMO future window before design review, not scheduled. Context: preserve R001 raw and logs, link corrected configuration/calibration versions; operational risk reviewed separately.
+
+New issue uses Test request form, links prior attempt and requirement, and returns to quick screening. Record authorization needs for changed scope/configuration; obtain resource commitments and renewed installed readiness before scheduling. Original attempt may close invalid after results/sign-offs and this linked follow-up; it cannot claim design FAIL or verification. Assign actual owner/due dates only during authorized exercise.
