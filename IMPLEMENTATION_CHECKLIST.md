@@ -2,7 +2,7 @@
 
 ## Delivered locally
 
-- [x] Separate sandbox; no existing Baja repository or live service writes.
+- [x] Separate preparation sandbox; subsequently deployed only to the explicitly authorized new private Testing repository. No existing Baja repository changes.
 - [x] Native test-request and medium/high preparation forms; blank issue config; no duplicate report form.
 - [x] README onboarding and explicit approved-methodology/proposed-implementation distinction.
 - [x] Lifecycle, technical and V&V standards plus approval/day/closure guides.
@@ -16,10 +16,14 @@
 
 ## Pending explicit authorization / manual checks
 
-- [ ] Confirm organization/repository/Project access, owner and private sandbox target.
-- [ ] Create/upload/merge into authorized sandbox default branch; validate rendered forms and labels.
+- [x] Confirm repository owner/access and create the authorized new private McGill-Baja-Racing/Testing target; Project API access is blocked.
+- [x] Publish all 41 pilot files to the new repository default branch and create seven configured labels.
+- [ ] Verify rendered forms manually; local syntax passes but Safari automation is disabled and was left unchanged.
 - [ ] Create private Project, configure views/fields, inspect workflow defaults and current access.
-- [ ] Submit fictional issues and run manual acceptance exercise; record actual results.
+- [x] Create three DEMO issues from published form fields through the API; verify bodies/labels.
+- [ ] Run remaining manual acceptance exercise; record actual results.
 - [ ] Leadership approves production rollout; separately approve permission or Drive changes if needed.
 
 Validation results are recorded in [validation report](VALIDATION_REPORT.md). Local schema checks are not GitHub's server-side validator. [Pilot acceptance plan](PILOT_TEST_PLAN.md).
+
+See [current deployment status](README.md). No Project was created because existing authentication lacks the required Project/organization read scopes; no access was broadened.

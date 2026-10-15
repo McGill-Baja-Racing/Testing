@@ -1,5 +1,7 @@
 # GitHub setup — proposed Stage 4, not deployed
 
+> This document preserves the initial local-pilot baseline and setup instructions. **The new private repository and three DEMO issues are now deployed with authorization.** See [current deployment status](../README.md). Project configuration and browser form-rendering checks remain pending; no permissions were changed. Do not repeat repository creation.
+
 No repository/Project/label/issue/permission/Drive writes were performed. Organization access is unconfirmed: the connected GitHub repository listing returned no accessible McGill-Baja-Racing repositories. Local pilot files are complete; GitHub rendering, permissions and views require an explicitly authorized sandbox exercise. Confirm visibility and owner before creation.
 
 ## Authorization boundary

@@ -1,8 +1,17 @@
-# Baja Testing — local pilot
+# Baja Testing — private demonstration
 
 **Reviewable pilot only.** Stages 1–3 in the implementation brief are approved methodology. Repository layout, fields, labels, ID conventions, reminder cadence and Project setup are proposed Stage 4 defaults. Nothing here records actual approval, scheduling, hardware capability or verification. All examples are DEMO.
 
-This standalone directory is outside ESP32DataLogger. No existing Baja repository, issue, organization Project, permission or Drive folder was changed. The GitHub connector returned no accessible repositories for McGill-Baja-Racing; organization access and deployment capability are unconfirmed.
+## Deployment status — 2026-10-15
+
+Deployed with explicit user authorization to the new **private** [McGill-Baja-Racing/Testing](https://github.com/McGill-Baja-Racing/Testing) repository, default branch `main`. The original 41 files were checked against the reviewed package byte for byte; this follow-up updates deployment documentation. No existing Baja repository, team permission or Drive folder was changed.
+
+- DEMO requests: [A — engine RPM #1](https://github.com/McGill-Baja-Racing/Testing/issues/1), [B — brake pressure #2](https://github.com/McGill-Baja-Racing/Testing/issues/2), [C — half-shaft strain #3](https://github.com/McGill-Baja-Racing/Testing/issues/3). Created through the API using the published form field labels, all explicitly fictional with approvals/commitments pending. Browser form submission was not used.
+- Both Issue Forms and chooser config are on the default branch; seven configured labels exist. Local form-schema validation passes. **Browser rendering remains unverified:** Safari automation requires a disabled browser setting, which was not changed. GitHub GraphQL returned an empty template listing, which does not establish successful rendering. An authorized reader must check [Test request](https://github.com/McGill-Baja-Racing/Testing/issues/new?template=test-request.yml) and [Preparation task](https://github.com/McGill-Baja-Racing/Testing/issues/new?template=preparation-task.yml) for visible fields, warnings and required-field behavior.
+- **Project not created/configured:** existing authentication lacks `read:project` and `read:org`; writing Projects would additionally require Project write authority. No scopes or permissions were broadened. Follow [Project setup](docs/project-setup.md) manually with an already authorized account, or explicitly approve appropriate access separately.
+- Prepublication review found no credentials, personal paths, email addresses, real Drive links or Actions workflows. The only shipped script is a manually invoked offline validator. No workflow automation was added.
+
+The implementation was prepared independently of ESP32DataLogger. The connected GitHub app could not access organization repositories; existing local GitHub authentication was used for the authorized deployment.
 
 ## Five-minute onboarding
 
@@ -27,4 +36,4 @@ This standalone directory is outside ESP32DataLogger. No existing Baja repositor
 
 From this directory run `python3 scripts/validate.py`. Python 3 and Ruby with its standard YAML library are required; no third-party packages or network access. Read [walkthrough](docs/walkthrough.md) in any Markdown viewer. This is a file-based pilot: GitHub renders the forms only after an authorized repository installation; no Project exists yet.
 
-For live deployment follow [the approval boundary and exact setup steps](docs/project-setup.md). A ZIP sibling of this directory contains the portable deliverable. Keep approvals, plans and results together on the parent test issue; linked preparation issues contain work execution details. Do not create a second results issue by default.
+For the remaining Project configuration and adoption steps follow [the approval boundary and exact setup steps](docs/project-setup.md). A ZIP sibling of this directory contains the portable deliverable. Keep approvals, plans and results together on the parent test issue; linked preparation issues contain work execution details. Do not create a second results issue by default.

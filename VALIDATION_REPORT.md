@@ -1,5 +1,7 @@
 # Local validation report
 
+> This document preserves the initial local-pilot baseline and setup instructions. **The new private repository and three DEMO issues are now deployed with authorization.** See [current deployment status](README.md). Project configuration and browser form-rendering checks remain pending; no permissions were changed. Do not repeat repository creation.
+
 Run date: 2026-10-15. This report covers local artifacts; all live GitHub and archive-access acceptance scenarios remain pending explicit authorization.
 
 Commands: `python3 scripts/validate.py` and `python3 scripts/validate.py --self-test` from pilot root. Final recorded results: both commands exited 0.
@@ -18,3 +20,7 @@ The validator does not contact GitHub, resolve external/private URLs, prove perm
 - Existing ESP32DataLogger working tree remained clean; no live GitHub or Drive mutations were performed.
 
 The Project setup guide references current official GitHub form-schema, Projects API and filtering documentation. Configuration specifications were inspected locally; they were not applied to a live Project. All manual scenarios remain pending as recorded in PILOT_TEST_PLAN.md.
+
+## Post-deployment documentation validation — 2026-10-15
+
+Five existing documentation files were updated to reflect the authorized private repository and DEMO issues, without changing forms, examples or engineering standards. The package remains 41 files. Revalidation passed: 3 YAML, 2 JSON, 2 CSV, 2 forms, 3 DEMO field sets, 32 Markdown files and 117 local links; zero errors. All seven mutation self-tests also passed. Browser rendering and Project configuration remain pending for the reasons recorded in the README.

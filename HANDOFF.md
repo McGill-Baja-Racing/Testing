@@ -1,5 +1,7 @@
 # Pilot handoff
 
+> This document preserves the initial local-pilot baseline and setup instructions. **The new private repository and three DEMO issues are now deployed with authorization.** See [current deployment status](README.md). Project configuration and browser form-rendering checks remain pending; no permissions were changed. Do not repeat repository creation.
+
 Start with [README](README.md) and [walkthrough](docs/walkthrough.md). The implementation brief supplied by the user was the requirements source; the attached prototype was inspected as reference only. No actions suggested by the prototype were treated as permission to deploy. Prototype included basic request/preparation/report forms, a static preview, starter inventory/DVP&R/templates and a short setup guide. This pilot replaces those with the complete methodology and retains a Markdown walkthrough rather than a separate web interface/report issue.
 
 Existing workspace: ESP32DataLogger, clean at inspection; no repository files changed. GitHub read-only organization lookup returned no accessible repositories; this does not establish organization absence or lack of membership. No live state was created. Pilot lives independently in `/private/tmp/baja-testing-pilot`; copy or extract the ZIP to a durable location before temporary-file cleanup.
