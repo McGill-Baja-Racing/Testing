@@ -1,13 +1,24 @@
-# DEMO preparation task — bounded strain feasibility
+# EXAMPLE — bounded strain feasibility task
 
-Hypothetical only; no full development or resource commitment.
+**DEMO / Hypothetical.** No actual investigation or commitment.
 
-- Parent test issue and stable test ID: [DEMO strain request](../requests/half-shaft-strain.md), TST-DEMO-003; actual issue URL pending.
-- Resource team, resource manager and work owner: DEMO electronics/specialist manager, bench investigator; identities unassigned.
-- Work scope and deliverable: feasibility note on safe mounting, rotating interface and calibration/load mapping with uncertainty blockers. Scope excludes full vehicle installation/development.
-- Dependencies: parent leadership value decision; explicit bounded-investigation authority and resource-manager commitment; competent bench safety assessment.
-- Preparation effort: High (overall development class; this task is bounded investigation).
-- Estimate, capacity and dates: illustrative cap one DEMO bench session; actual hours, budget, availability and due date TBD by manager. Stop at cap; return with proceed/revise/defer recommendation. No actual commitment.
-- Readiness evidence required: method/references, safe fixture concept, observed limitations and feasibility recommendation. This deliverable supports a decision about full preparation; it is not installed readiness.
+### Parent test issue and stable test ID
+[TST-DEMO-003](../requests/half-shaft-strain.md).
 
-After review, full preparation needs separate authority, manager commitments and linked development/calibration/integration tasks. A feasibility note cannot promote this test to Ready.
+### Resource team, resource manager and work owner
+EXAMPLE Electronics Manager / specialist C, consulting EXAMPLE mechanical resource manager.
+
+### Work scope and deliverable
+One safe nonrotating surrogate bench investigation: bonding/signal/reference-load feasibility and blocker/uncertainty note. Excludes full installed development and vehicle runs.
+
+### Dependencies
+Parent individual Manager value decision; defined resource capacity; Managers' bounded authorization; competent fixture safety review. Screening alone is insufficient.
+
+### Preparation effort
+High
+
+### Estimate, capacity and dates
+Fictional cap: one 90-minute bench session on 2098-12-15; note due 2098-12-16. Electronics Manager acknowledges this slot and maximum one active feasibility investigation before Managers authorize it. Stop at cap and review proceed/revise/defer/stop.
+
+### Readiness evidence required
+Feasibility note with method/reference concept, observations, safe installation path and unresolved calibration/uncertainty blockers. This is evidence for the next decision, not installed readiness. [Later preparation](strain-integration.md) needs fresh capacity and separate Manager authorization.

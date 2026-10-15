@@ -1,6 +1,16 @@
-# Data naming, retention and archive proposal
+# Data storage and traceability
 
-No Drive folders or permissions have been created. Proposed layout in the existing team Drive:
+GitHub holds requests, small metadata, procedures, calibration descriptions, reports and analysis code. The existing team Google Drive holds large raw recordings/videos. No folders or permissions are created by these files; an authorized archive owner must confirm locations and access before the first real test.
+
+## Test and run IDs
+
+**Proposed collision-safe convention:** derive test IDs from the GitHub owner/repository and issue number: `McGill-Baja-Racing-Testing-123` for test issue #123. Issue numbers are unique within that repository; preparation issues use their parent's test ID. Reserve the `EXAMPLE` namespace for documentation only. Existing `TST-DEMO-001`–`004` IDs remain historical example IDs and are not reused for real work.
+
+Run IDs append `-R001`, `-R002`, etc.; include rejected and aborted runs and never recycle an index. An independently authorized retest gets a new test issue/ID with a link to its predecessor. If a test issue must move between repositories, retain its original stable ID and record the old/new URLs; do not rename historic data. Requirement and device IDs are independent of issue numbers.
+
+## Folders and filenames
+
+Proposed layout under the team's existing archive:
 
 ```text
 Testing Data/<season>/<test-id>_<short-name>/
@@ -10,14 +20,16 @@ Testing Data/<season>/<test-id>_<short-name>/
   supporting/
 ```
 
-Testing Manager allocates IDs such as `TST-DEMO-001` in the pilot; production proposal is `TST-<season>-<sequence>` from one allocation register. Never reuse IDs. Run IDs append `-R001`, including failed/aborted attempts. An independently authorized retest uses a new test ID and links the prior attempt. Stable requirement IDs are independent of season/test numbering.
+Use `<run-id>_<stream>_<UTC-timestamp>_<configuration-revision>.<ext>`; the run ID already includes the test ID. UTC timestamps use `YYYYMMDDTHHMMSSZ`; run logs use ISO 8601 with an explicit offset. For example, `EXAMPLE-002-R001_pressure_20990101T140000Z_cfg-B.csv` is fictional naming, not a real recording.
 
-File convention: `<test-id>_<run-id>_<stream>_<UTC-timestamp>_<config-rev>.<ext>`. Timestamp format `YYYYMMDDTHHMMSSZ`; record local offset separately when useful. Avoid spaces and ambiguous local times. Every stream/video includes run and synchronization reference. [Run log](../templates/run-log.csv) uses ISO 8601 start/end timestamps with offsets, configuration/version reference, conditions, observations/deviations, raw-data reference and calibration reference. Record no-calibration-required with rationale where appropriate.
+The [run log](../templates/run-log.csv) records test/run IDs, start/end, configuration, conditions, observations/deviations, raw link, calibration reference, operator and data quality. Every video/stream has a run ID and synchronization reference. Original logger filenames may be retained: record their run mapping rather than rename/overwrite originals.
 
-Retain original raw data without overwriting or deleting it during processing. Preserve invalid/aborted runs. New derivations go in processed with versioned parameters/code commits; supporting holds plans, installation/calibration records, metadata and reports. Keep a manifest of original filenames, sizes and checksums when importing; if names change at import, preserve mapping and originals. Preserve raw even when corrected metadata is added alongside it. Proposed retention is indefinite pending explicit team retention policy; no automatic cleanup.
+## Preserve and link evidence
 
-Minimum supporting metadata: test/run IDs; actual conditions; configuration/firmware/analysis commits; physical device IDs; install/calibration versions and validity; units/scaling; sampling/timebase; operators; plan revision; deviations/data checks; manifest; processing instructions and result links. GitHub holds small metadata, procedures, calibration descriptions and code, with stable links to large data.
+- Never overwrite original raw files, including invalid/aborted attempts. Keep new processing versions in `processed/`, with analysis code commit/settings. Corrections go in separate metadata/derivations, not replacement raw files.
+- At import retain a manifest of original names, sizes and checksums plus any import-name mapping. `supporting/` holds the plan/configuration, equipment/calibration versions, units/scaling, sampling/timebase, operators, conditions, deviations, logs and reports.
+- Link stable folder/file references from the parent issue and run log; link relevant evidence/applicability from DVP&R. Check intended reader access before leaving where practicable and at closure. Record archive custodian and backup arrangement.
+- Do not invent Drive URLs. Blank templates collect the real link; fictional examples use the local [archive example](../examples/data/README.md). Avoid moving linked folders; if necessary preserve cross-references and update the evidence index.
+- Sharing follows existing team policy. Permission changes, folder creation or reorganization require explicit authorization. Proposed retention is indefinite until Managers approve a retention policy; no automatic cleanup is installed.
 
-Use `<DRIVE_FOLDER_LINK_PENDING_AUTHORIZATION>` in local examples, never invented Drive URLs. After authorization, archive owner supplies stable folder/file links, confirms intended team access under existing policy, checks from a reader account and records custodian and backup arrangement. Do not expose private data by changing sharing without approval. Avoid moving folders after linking; if unavoidable keep a cross-reference and update issue index, logs and DVP&R. Testing Manager checks access at closure.
-
-Existing [ProjectBoard](https://github.com/McGill-Baja-Racing/ProjectBoard) and [ESP32DataLogger](https://github.com/McGill-Baja-Racing/ESP32DataLogger) may be referenced by full issue/code links after actual references are known; no issues are moved or modified by this pilot.
+Related code/issues may be linked in [ESP32DataLogger](https://github.com/McGill-Baja-Racing/ESP32DataLogger) or [ProjectBoard](https://github.com/McGill-Baja-Racing/ProjectBoard). This repository does not move or alter those records.

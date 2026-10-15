@@ -1,16 +1,12 @@
-# Approval handling
+# Record decisions without duplicating work
 
-Copy [gate records](../../templates/approval-record.md) into the test issue. Relevant authorized people append decisions with identity, date, scope/configuration, rationale and evidence/comment link; Testing Manager keeps an index. Preserve superseded decisions and explain what changed. Project fields are navigational summaries only.
+Use the [five-gate record](../../templates/approval-record.md) on the **parent test issue**. The [lifecycle standard](../standards/testing-lifecycle.md#five-distinct-gates) defines authority; this guide explains how to record it.
 
-1. Requesting subsystem lead confirms completeness; technical teams can request precise clarification.
-2. Relevant teams perform quick feasibility screening before leadership prioritization. Screening is not authorization to begin development.
-3. Leadership assesses test value individually at regular meetings. Representative or any substituting leadership member records approve/defer/decline and constraints.
-4. Unknown feasibility uses a bounded investigation: question, deliverable, cap and review point, plus explicit resource-manager commitment. No automatic expansion to full development.
-5. Record separate full preparation authority and resource manager acknowledgments for each team: work owner, allocated availability, estimate, due dates, dependencies and WIP limits. Partially committed tests remain Awaiting Capacity for remaining work.
-6. Relevant technical owners sign readiness for the installed configuration. Testing Manager schedules only then.
-7. On site, requesting lead and Testing Manager jointly decide execution subject to technical/safety clearance. Anyone can stop; resolve concern, obtain proper clearance and renew joint go/no-go before resume.
-8. Lead approves conclusions; Testing Manager checks records before closing the attempt.
+- Each authorized decision-maker comments with role/name, date, decision, scope/configuration, rationale and supporting links. The Testing Manager maintains one index of those comments. Preserve and supersede old decisions explicitly.
+- Managers' test-value approval is individual. The designated test-approval Manager records it; any Manager may substitute. Deferred/declined decisions include a reason and review trigger where relevant.
+- Before Managers authorize an investigation or full preparation, each resource manager acknowledges defined scope, capacity/availability, work owner, estimate/dates, dependencies and manageable simultaneous-work limit. Commitments are conditional on the appropriate Manager authorization; no team begins unauthorized work.
+- One comment can hold several clearly separated decisions if the person has the relevant roles. Do not copy the full record into every preparation issue: link the parent and report deliverable evidence on the task.
+- Readiness signs off a configuration/intended use. Scheduling and final joint go/no-go remain separate. On-site changes and stop/resume decisions link revised evidence and clearance.
+- Labels, assignments, Project statuses and closed issues never prove approval. Forms do not authenticate that a requester is a Subsystem Lead. Role authority comes from the team's agreed responsibilities, not broad repository write permissions.
 
-Urgent new diagnostic work still needs leadership approval. Testing Manager and affected leads may reorder previously approved tests. Stopping, safety inspections and securing the vehicle do not wait for approval. Configuration changes need documented reassessment with technical/safety owners; major scope changes return to screening and reauthorization.
-
-Proposed pilot implementation: no automated approvals and no role-verification bot. Forms cannot prove lead identity or leadership authority. Agree the roster and delegations through existing governance during rollout; do not broadly grant repository write access as a substitute.
+**Proposed record convention:** ISO date/time with offset, named decision-maker and stable comment link. The process requires identifiable decisions; this formatting is an implementation default. [Managers guide](managers.md).

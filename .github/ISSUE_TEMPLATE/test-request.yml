@@ -1,6 +1,6 @@
 ---
 name: Test request
-description: Subsystem lead submits an engineering test for screening and individual
+description: Subsystem Lead submits an engineering test for screening and individual
   approval.
 title: "[TEST] "
 labels:
@@ -8,15 +8,16 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: Subsystem leads formally initiate requests. Submission ≠ approval; leadership
-      approval ≠ resource commitment, readiness or execution clearance. State physical
-      needs; detailed instrumentation design follows screening. Timing is requested,
-      never a booking.
+    value: Formal requests are submitted by a Subsystem Lead. Submission is not approval.
+      Managers approve test value individually; resource managers confirm capacity
+      before Managers authorize preparation. Readiness and final joint go/no-go are
+      separate. Describe physical needs; instrumentation details come later.
 - type: input
   id: subsystem
   attributes:
-    label: Requesting subsystem and lead
-    description: Name the responsible subsystem lead.
+    label: Requesting subsystem and Subsystem Lead
+    description: Name the responsible Subsystem Lead; other members suggest tests
+      through their lead.
   validations:
     required: true
 - type: dropdown
@@ -53,9 +54,9 @@ body:
   id: decision
   attributes:
     label: Intended engineering decision and sufficient evidence
-    description: What decision will change? What evidence would answer the question?
-      Include justified acceptance criteria if appropriate, or say they need owner
-      definition.
+    description: What decision will change and why does testing matter? What evidence
+      answers the question? Include relevant criteria and basis, or identify what
+      still needs definition.
   validations:
     required: true
 - type: textarea
@@ -73,8 +74,10 @@ body:
   id: timing
   attributes:
     label: Requested and last useful timing
-    description: Optional preferred date, latest useful date and reason; unknown is
-      acceptable.
+    description: Preferred date/window and latest useful date with reason. If unknown,
+      state the decision milestone; this is not a confirmed booking.
+  validations:
+    required: true
 - type: textarea
   id: context
   attributes:

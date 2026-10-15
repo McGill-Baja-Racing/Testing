@@ -1,12 +1,25 @@
-# Local pilot walkthrough
+# Walk through one test
 
-This Markdown walkthrough is a working review path through repository artifacts, not a live Project or permission system. Every request/example is DEMO.
+Start with [the README](../README.md). This is a file-based walkthrough, not a live Project simulation. All linked example decisions/data are fictional; no sign-offs are implied.
 
-1. Open the [test-request form](../.github/ISSUE_TEMPLATE/test-request.yml) beside [example A](../examples/requests/engine-rpm.md). The lead supplies a question, physical need, outputs, decision and consequences. No sensor datasheet or calibration design is forced at intake.
-2. Testing Manager records ID and completeness; instrumentation owner adds quick screening. For A the fictional assumption is a known validated configuration and low effort, so a checklist suffices. Actual readiness still requires configuration-specific evidence.
-3. Walk through [gate records](../templates/approval-record.md): leadership value, any bounded investigation, full preparation authority, manager capacity, readiness, schedule, final go/no-go and closure. Approving one row does not approve later rows.
-4. Open [example B](../examples/requests/brake-pressure.md) and its [preparation task](../examples/preparation/brake-adaptation.md). It stays Awaiting Capacity while any needed manager has not committed. Complete the [modular plan](../templates/test-plan.md) with operating conditions and specialist instrumentation detail; complete [readiness](../templates/readiness-checklist.md). Confirm a day only after technical sign-offs.
-5. Simulate final joint go/no-go, then inspect the [DEMO CSV](../examples/run-log.csv). Dates in 2099 are deliberately fictional. R001 is invalid due to hypothetical scaling mismatch; R002 is aborted after a stop. Neither proves design failure. Preserve raw, post [results](../templates/results-summary.md), open the [follow-up](../examples/follow-up.md), leave requirements unverified and obtain closure sign-offs.
-6. Open [example C](../examples/requests/half-shaft-strain.md). Unknown feasibility and high development require a bounded investigation with its own capacity and cap. Its [task](../examples/preparation/strain-feasibility.md) cannot grant full-development authority or readiness. Review at the cap before committing development.
-7. Compare the [device inventory](../instrumentation/inventory.md) with [DVP&R](../verification/subsystems/drivetrain.md). Device calibration, installed readiness, test-attempt validity and requirement verification answer different questions. No demonstration entry is actually verified.
-8. Run `python3 scripts/validate.py` from the pilot root, then review [acceptance scenarios](../PILOT_TEST_PLAN.md). After explicit deployment approval, use [Project setup](project-setup.md) to conduct the same exercise in a private sandbox. Until then GitHub submission/rendering and Project behavior are manual pending checks.
+## A. A simple RPM question
+
+Open [the filled request](../examples/requests/engine-rpm.md). A Subsystem Lead can answer the intake fields without choosing a sensor. The screen assumes an existing known installation; a 30-minute checklist is enough preparation, subject to Electronics Manager capacity and Managers' authorization. The compact [working plan](../examples/requests/engine-rpm.md#working-plan) links calibration/configuration instead of repeating it.
+
+Follow the five separate decisions in the [parent index](../templates/approval-record.md). A known method can justify no feasibility investigation; it cannot skip technical readiness or final joint go/no-go. After fictional runs, the exploratory finding has no forced design PASS/FAIL. Subsystem Lead interpretation and Testing Manager record check would precede closure.
+
+## B. Adapt an installed brake sensor
+
+[Pressure request](../examples/requests/brake-pressure.md) needs [medium preparation](../examples/preparation/brake-adaptation.md). Both resource managers commit defined work before Managers authorize it. Awaiting Capacity is the honest state while either commitment is missing. Readiness needs installed scaling/timebase/reference evidence, not merely a calibrated standalone unit.
+
+The [invalid case study](../examples/requests/brake-pressure.md#invalid-attempt-case-study) deliberately shows a missed configuration reassessment: per-run checks expose scaling mismatch. It demonstrates a process violation, not a permitted shortcut. Preserve originals, stop and document invalid evidence. The [follow-up](../examples/follow-up.md) leaves the requirement unverified and returns correction/retest through appropriate screening and authorization.
+
+## C. Investigate strain feasibility before development
+
+[Strain request](../examples/requests/half-shaft-strain.md) starts with unknown feasibility. A [90-minute bounded task](../examples/preparation/strain-feasibility.md) produces a blocker/method note, not readiness. Stop/review at the cap. Only after a feasible method and fresh resource commitments can Managers authorize [full preparation](../examples/preparation/strain-integration.md). Calibration and installed integration are still required before scheduling.
+
+## Inspect the records
+
+Compare [model/unit/calibration/installation examples](../examples/instrumentation.md) with the [operational inventory](../instrumentation/inventory.md): available is not ready for this test. Compare [DVP&R rows](../verification/subsystems/drivetrain.md) with [attempt validity](guides/closure.md): closed is not verified. No fictional record supplies actual evidence.
+
+Run `python3 scripts/validate.py` and `python3 scripts/validate.py --self-test` from the repository root. [Validation report](../VALIDATION_REPORT.md) states what was checked; [acceptance scenarios](../PILOT_TEST_PLAN.md) separate local checks from browser/Project/manual checks requiring authorized deployment.
