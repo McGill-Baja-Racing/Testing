@@ -1,86 +1,128 @@
 ---
-name: Test request
-description: Subsystem Lead submits an engineering test for screening and individual
-  approval.
+name: Test Request
+description: Request testing and explain the measurement need. Subsystem Leads submit
+  formal requests.
 title: "[TEST] "
 labels:
-- test-request
+- testing:needs-review
 body:
 - type: markdown
   attributes:
-    value: Formal requests are submitted by a Subsystem Lead. Submission is not approval.
-      Managers approve test value individually; resource managers confirm capacity
-      before Managers authorize preparation. Readiness and final joint go/no-go are
-      separate. Describe physical needs; instrumentation details come later.
-- type: input
-  id: subsystem
+    value: "**Subsystem Leads submit formal requests.** Give the issue a clear title
+      describing the test or performance metric. Explain what you need to measure
+      and why; Electronics can help with technical details. Unknown or TBD is welcome
+      for technical details needing help. Submission does not guarantee the requested
+      date or authorize vehicle operation."
+- type: markdown
   attributes:
-    label: Requesting subsystem and Subsystem Lead
-    description: Name the responsible Subsystem Lead; other members suggest tests
-      through their lead.
-  validations:
-    required: true
-- type: dropdown
-  id: purpose
-  attributes:
-    label: Test purpose
-    options:
-    - Verification
-    - Validation
-    - Characterization
-    - Comparison
-    - Diagnostics
-    - Durability
-    - Integration
-    - Other
-  validations:
-    required: true
+    value: |-
+      ## Section A — Test objective
+      Describe the engineering question and useful outputs.
 - type: textarea
   id: question
   attributes:
-    label: Engineering question
-    description: A definite question; exploratory work does not need a forced hypothesis.
-  validations:
-    required: true
-- type: textarea
-  id: measurements
-  attributes:
-    label: Physical measurements and expected outputs
-    description: Describe physical quantities, operating conditions and outputs; do
-      not invent sensor specifications.
-  validations:
-    required: true
-- type: textarea
-  id: decision
-  attributes:
-    label: Intended engineering decision and sufficient evidence
-    description: What decision will change and why does testing matter? What evidence
-      answers the question? Include relevant criteria and basis, or identify what
-      still needs definition.
-  validations:
-    required: true
-- type: textarea
-  id: consequences
-  attributes:
-    label: Consequences of not testing
+    label: What are you trying to determine?
+    description: Describe the question or performance metric.
+    placeholder: 'For example: Does engine speed change consistently during acceleration?'
   validations:
     required: true
 - type: input
   id: requirements
   attributes:
-    label: Requirement IDs and references
-    description: Optional DVP&R IDs, calculations or design links.
-- type: input
-  id: timing
+    label: Related requirements (if applicable)
+    description: Link an existing requirement document, ID or section; do not duplicate
+      its content.
+- type: textarea
+  id: measurements
   attributes:
-    label: Requested and last useful timing
-    description: Preferred date/window and latest useful date with reason. If unknown,
-      state the decision milestone; this is not a confirmed booking.
+    label: What measurements and expected outputs are needed?
+    description: Name physical quantities and the result you want to use.
+    placeholder: 'For example: Engine speed versus time and a comparison between runs.'
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |-
+      ## Section B — Test preparation
+      Share what is known. A complete electronics design or procedure is not required.
+- type: input
+  id: vehicle
+  attributes:
+    label: Which vehicle will be used?
+    description: Give its name/year or enter Unknown/TBD.
   validations:
     required: true
 - type: textarea
-  id: context
+  id: vehicle_readiness
   attributes:
-    label: Known hazards, constraints and context
-    description: Optional; technical complexity and operational safety risk are assessed
-      separately.
+    label: Is the vehicle ready? What remains to be done?
+    description: List known repairs, assembly or installation work. Unknown/TBD is
+      fine.
+  validations:
+    required: true
+- type: textarea
+  id: method
+  attributes:
+    label: Proposed testing method
+    description: A short idea is enough. Enter Unknown/TBD if you need help; include
+      location details if choosing Other.
+  validations:
+    required: true
+- type: textarea
+  id: sensors
+  attributes:
+    label: Sensors or measurements required
+    description: List known sensors or describe the physical need. Sensor models and
+      sampling rates are not required.
+  validations:
+    required: true
+- type: dropdown
+  id: existing
+  attributes:
+    label: Do the necessary sensors and electronics already exist?
+    description: Choose Unsure if specialist review is needed.
+    options:
+    - 'Yes'
+    - 'No'
+    - Unsure
+  validations:
+    required: true
+- type: dropdown
+  id: location
+  attributes:
+    label: Proposed location
+    description: If Other, name the location in the proposed method; TBD is acceptable.
+    options:
+    - MEDN
+    - Courtyard
+    - ENA
+    - Other or TBD
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |-
+      ## Section C — Timing and justification
+      Requested timing helps review; it is not a confirmed booking.
+- type: input
+  id: need_by
+  attributes:
+    label: Need-by date (YYYY-MM-DD)
+    description: Use an unambiguous date including the year.
+    placeholder: YYYY-MM-DD, for example 2027-02-15
+  validations:
+    required: true
+- type: textarea
+  id: date_reason
+  attributes:
+    label: Why is that date necessary?
+    description: Name the design decision, milestone or other timing reason.
+  validations:
+    required: true
+- type: textarea
+  id: consequences
+  attributes:
+    label: What happens if testing does not occur?
+    description: Explain the engineering or schedule consequence, briefly.
+  validations:
+    required: true

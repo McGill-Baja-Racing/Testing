@@ -1,42 +1,36 @@
-# McGill Baja Racing — Testing
+# McGill Baja Racing — Testing Requests
 
-Plan tests, prepare reliable measurements, and turn evidence into engineering decisions. This repository connects test requests, preparation, procedures, results, and requirement verification. GitHub tracks the work; the team's existing Google Drive holds large recordings and videos. A request or Project status never authorizes vehicle operation.
+## What is this repository?
 
-**Adoption status:** this revision is ready for team review; rollout awaits Manager authorization and the [deployment checks](HANDOFF.md). The existing private GitHub repository contains DEMO requests. A testing Project has not been configured. No example is an approved test or real evidence.
+A central place for McGill Baja Racing Subsystem Leads to request testing, communicate measurement needs and coordinate the preparation necessary to obtain useful results. This first release focuses on requests and review.
 
-## Start here
+## How to request a test
 
-| Your role | First action |
-| --- | --- |
-| New member | Follow the [example journey](docs/walkthrough.md); suggest test ideas to your Subsystem Lead. |
-| Subsystem Lead | [Request a test and maintain verification](docs/guides/subsystem-lead.md). |
-| Manager | [Review priorities, capacity and authorizations](docs/guides/managers.md). |
-| Testing Manager | [Coordinate screening, preparation and scheduling](docs/guides/testing-manager.md). |
-| Test Lead | [Plan the test, record runs and hand off data](docs/guides/test-lead.md). |
-| Electronics / Instrumentation Owner | [Assess measurement needs and prepare systems](docs/guides/instrumentation.md). |
-| Analysis Owner | [Analyze, report and support closure](docs/guides/closure.md). |
+**[Create a Test Request](https://github.com/McGill-Baja-Racing/Testing/issues/new?template=test-request.yml)**
 
-## Request a test
+Only **Subsystem Leads** submit formal requests. Other members should bring testing ideas to their Subsystem Lead.
 
-1. **Subsystem Leads submit formal requests.** Other members bring ideas to their lead.
-2. Read the [simple RPM example](examples/requests/engine-rpm.md), then open [New Test Request](https://github.com/McGill-Baja-Racing/Testing/issues/new?template=test-request.yml) after rollout. Reviewing locally? Read the [form fields](.github/ISSUE_TEMPLATE/test-request.yml).
-3. Explain the question, physical measurements, expected outputs, engineering decision, sufficient evidence, consequences of not testing, and preferred/latest useful timing. Add requirement references if available. Sensor selection and sampling details come later.
-4. Confirm completeness and respond to screening questions. The Testing Manager coordinates review; Managers decide priority and approve each test individually. **Submission is not approval.**
+Give the issue a clear title, such as “Measure engine speed during acceleration.” Explain what you want to determine, what to measure and why it matters. Include the vehicle, proposed method/location, known preparation and need-by date (`YYYY-MM-DD`). Link existing requirements where relevant; do not copy them into this repository.
 
-## Lifecycle at a glance
+You do not need exact sensor models, sampling rates or a finished procedure. Enter **Unknown** or **TBD** when a technical detail needs help from another team. The Electronics Manager can help clarify instrumentation needs.
 
-Request → screen feasibility → Managers review → prepare → confirm readiness → schedule → execute → analyze → close the attempt and update verification.
+## What happens next?
 
-Five decisions stay separate: **test-value approval; bounded feasibility authorization when needed; preparation authorization after capacity commitments; technical readiness; final joint go/no-go.** Ready tests may be scheduled. Execution still requires the Subsystem Lead and Testing Manager's joint decision plus mandatory technical/safety clearance. Anyone can stop unsafe work. [Process and responsibilities](docs/standards/testing-lifecycle.md).
+1. The request is reviewed for clarity and instrumentation requirements.
+2. Preparation effort and feasibility are assessed.
+3. Managers review priorities and resources.
+4. The test is confirmed only when the necessary preparation and readiness checks are completed.
 
-## Find the records
+The Testing Manager coordinates follow-up. **Submitting an issue does not guarantee testing on the requested date.**
 
-| You need | Go to |
-| --- | --- |
-| Active requests and preparation | [GitHub issues](https://github.com/McGill-Baja-Racing/Testing/issues); [Project setup and current fallback](docs/project-setup.md) |
-| Design Verification Plan and Report (DVP&R) | [Verification index](verification/README.md) and [blank template](templates/dvp-r.md) |
-| Sensor availability and readiness | [Equipment inventory](instrumentation/inventory.md) |
-| Procedures and run records | [Test plan](templates/test-plan.md), [readiness checks](templates/readiness-checklist.md), [run log](templates/run-log.csv) |
-| Data, analysis and conclusions | [Storage conventions](docs/data-storage.md), [results summary](templates/results-summary.md), [detailed report](templates/test-report.md) |
+## Where to see testing requests
 
-Need help? Ask your Subsystem Lead about objectives, the Electronics Manager about measurement capacity, and the Testing Manager about coordination. Managers resolve priorities and testing-time conflicts.
+Follow requests on the **[Issues page](https://github.com/McGill-Baja-Racing/Testing/issues)**. We use five tracking labels:
+
+- `testing:needs-review` — new request awaiting review.
+- `testing:needs-clarification` — more information is needed.
+- `testing:needs-preparation` — preparation remains before confirmation.
+- `testing:ready` — necessary preparation and readiness checks are complete.
+- `testing:completed` — the request is resolved and its outcome is recorded.
+
+See the short [request tracking guide](docs/request-tracking.md) for reviewer responsibilities. Labels summarize progress; they do not authorize vehicle operation.
