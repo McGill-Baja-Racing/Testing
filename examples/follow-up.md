@@ -1,7 +1,34 @@
-# DEMO follow-up request — pressure configuration correction and retest
+# EXAMPLE — invalid attempt follow-up
 
-Hypothetical only; no actual invalid event occurred. Parent: [TST-DEMO-002](requests/brake-pressure.md). New test ID: TST-DEMO-004. Requirement: DEMO-VEH-05, remains unverified.
+**DEMO / Hypothetical:** no actual invalid event, approval or measurement. Stable historical example ID **TST-DEMO-004**; parent attempt [TST-DEMO-002](requests/brake-pressure.md#invalid-attempt-case-study). Requirement [DEMO-VEH-05](vehicle-validation.md) remains unverified.
 
-Requesting subsystem/lead: Brakes — DEMO lead. Purpose: Diagnostics. Question: after correcting the scaling/configuration mismatch, can pressure traces support the original comparison? Measurements/outputs: pressure versus time, installed reference check and limitations. Decision/evidence: establish signal-chain validity before interpreting brake behavior; operating envelope and uncertainty require owner agreement. Consequence of not testing: unresolved pressure behavior and unsafe reliance on invalid evidence. Timing: requested DEMO future window before design review, not scheduled. Context: preserve R001 raw and logs, link corrected configuration/calibration versions; operational risk reviewed separately.
+### Requesting subsystem and Subsystem Lead
+Brakes — EXAMPLE Brakes Subsystem Lead.
 
-New issue uses Test request form, links prior attempt and requirement, and returns to quick screening. Record authorization needs for changed scope/configuration; obtain resource commitments and renewed installed readiness before scheduling. Original attempt may close invalid after results/sign-offs and this linked follow-up; it cannot claim design FAIL or verification. Assign actual owner/due dates only during authorized exercise.
+### Test purpose
+Diagnostics
+
+### Engineering question
+After correcting the scaling/configuration mismatch, can installed pressure traces support the original characterization question?
+
+### Physical measurements and expected outputs
+Pressure/time/reference comparison and configuration/units checks; corrected trace and uncertainty/limitations note.
+
+### Intended engineering decision and sufficient evidence
+Establish signal-chain validity before interpreting brake behavior. Demonstrate installed reference-to-file agreement for the intended range and temporal response; Subsystem Lead and specialist agree sufficient evidence before execution. No vehicle pass/fail claim.
+
+### Consequences of not testing
+Pressure behavior remains unresolved and invalid prior evidence could be reused mistakenly.
+
+### Requirement IDs and references
+DEMO-VEH-05; preserve original R001/R002 raw/logs and configuration history.
+
+### Requested and last useful timing
+Fictional preferred retest 2099-01-06; latest useful 2099-01-10 review. No booking or real approval.
+
+### Known hazards, constraints and context
+Return to screening. Assess scope/configuration changes with the Testing Manager and technical/safety owners. Capacity and revised authorization precede correction/preparation; repeat affected readiness checks before confirming a day and obtain final joint go/no-go. EXAMPLE Brakes Analysis Owner's proposed due date is 2099-01-08, agreed during actual planning.
+
+## Original-attempt closure
+
+The invalid parent can close after an honest results summary, Subsystem Lead interpretation approval, Testing Manager completeness check and this linked follow-up for unresolved objectives. Do not mark design FAIL or requirement verified. A substantial new investigation still needs its own Subsystem Lead request and individual Manager approval. [Closure guide](../docs/guides/closure.md).

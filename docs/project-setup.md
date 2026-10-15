@@ -1,61 +1,58 @@
-# GitHub setup — proposed Stage 4, not deployed
+# Testing Project setup and operation
 
-> This document preserves the initial local-pilot baseline and setup instructions. **The new private repository and three DEMO issues are now deployed with authorization.** See [current deployment status](../README.md). Project configuration and browser form-rendering checks remain pending; no permissions were changed. Do not repeat repository creation.
+## Current state and fallback
 
-No repository/Project/label/issue/permission/Drive writes were performed. Organization access is unconfirmed: the connected GitHub repository listing returned no accessible McGill-Baja-Racing repositories. Local pilot files are complete; GitHub rendering, permissions and views require an explicitly authorized sandbox exercise. Confirm visibility and owner before creation.
+The private `McGill-Baja-Racing/Testing` repository and three DEMO issues were deployed previously. **This production revision is local and unpublished. No testing Project is configured or connected to Drive.** Previous Project API access was blocked by missing `read:project` and `read:org`; write configuration also needs Project write authority. Access has not been broadened or rechecked in this revision.
 
-## Authorization boundary
+Until a Project is authorized, the Testing Manager uses parent issue decision comments and ordinary issue search. [Requests excluding DEMO](https://github.com/McGill-Baja-Racing/Testing/issues?q=is%3Aissue+is%3Aopen+label%3Atest-request+-label%3Ademo) · [Preparation excluding DEMO](https://github.com/McGill-Baja-Racing/Testing/issues?q=is%3Aissue+is%3Aopen+label%3Apreparation+-label%3Ademo). Do not maintain a second tracking spreadsheet. Read committed scope and due dates in parent/task records; label/status never proves authorization.
 
-Obtain explicit authorization for creating the target repository/Project and uploading files/demo issues. Proposed production targets are `McGill-Baja-Racing/Testing` and a separate `Testing Management` Project; do not reuse or change ProjectBoard or ESP32DataLogger. Review and separately approve any permission change, invitation, organization automation or Drive change. These instructions do not grant approval. No Actions workflows are included.
+## Configure only after authorization
 
-## Exact setup sequence after authorization
+1. Confirm the selected account's existing organization/Project access and private visibility. Obtain approval before publishing this revision, creating a Project, changing permissions or enabling organization automation. Do not create another repository or touch existing Baja projects.
+2. Publish the reviewed files through an authorized feature branch/PR to the **existing** Testing repository. After the separately approved default-branch update, check **Issues → New issue**: Test request and Preparation task render, warnings/fields appear, and required-field behavior is tested. Schema checks are not a substitute for this browser check. Safari settings were previously left unchanged when automation was blocked.
+3. Under **Issues → Labels**, compare the seven [configured labels](../config/labels.json) with existing labels. The seven were previously created; retain unrelated labels and add/update only as explicitly authorized. Form labels must already exist. Do not add auto-assignees or automatic Project membership to the forms.
+4. In approved organization's **Projects → New project → Table**, create a blank **Testing Management** Project only if that creation is authorized and no intended existing Project needs adoption. Set **Private** visibility and inspect current access; do not invite people/change team permissions. In **Settings → Workflows**, inspect default close/reopen/status behavior. Leave automation off unless separately reviewed/authorized; automatic status changes must never imply sign-off.
+5. Customize built-in **Status** using the list below. In table **+ → New field** (or **Settings → Fields**), add [the remaining fields](../config/project.json). Keep built-in Title, Assignees and Labels. Set new test intake explicitly to Submitted, Active, Work type=Test; preparation tasks use Work type=Preparation. Assignees are work owners, not approvers.
+6. Create the five views below with **New view**, set table/board layout, filters, grouping, sorting and visible columns, then **Save changes**. Use the UI field picker for fields containing spaces; copied filter text is an aid, not a tested live configuration. Add items from an unfiltered intake view; filtered views can populate fields when adding items.
+7. Add existing test/preparation issues manually through their **Projects** sidebar or **Add item**. Link the parent gate index, owner fields and requirements. Native sub-issues are optional; full parent/task links work without feature-dependent behavior. Never move existing Baja issues.
+8. Run the [manual acceptance scenarios](../PILOT_TEST_PLAN.md) using clearly labeled DEMO records only after authorization. DEMO items are excluded from operational views; use a temporary authorized review view or remove that filter during the exercise. Record actual UI results. Managers approve adoption; repository permissions and any Drive setup remain separate authorization decisions.
 
-1. With an authorized account, confirm access to the organization and permission to create the intended private sandbox repository and Project. Confirm which account/organization owns them. Do not infer rights from this local package or request broader scopes automatically.
-2. In GitHub choose **New repository**, select approved owner/name, choose **Private**, enable Issues and create the empty repository. Upload this package on a feature branch and open a draft PR; do not merge or publish without the required approval. Use a distinct DEMO repository if production `Testing` has not been approved.
-3. Create labels from [labels.json](../config/labels.json) through repository **Issues → Labels → New label** (name, six-digit color, description). Existing labels need not be removed. Pre-create `test-request` and `preparation` so form labels apply.
-4. Review/approve the sandbox branch merge to its default branch to test form discovery. GitHub discovers issue templates there. Open **Issues → New issue** and check both forms. Do not treat unmerged feature-branch form rendering as verified. Blank issue creation is disabled in [config](../.github/ISSUE_TEMPLATE/config.yml); this is convenience, not access control.
-5. Open approved owner's **Projects → New project → Table**, choose blank and name it **Testing Management** (or explicitly approved DEMO name). Set private visibility in Project settings. Review current access and report needed changes for separate approval; do not grant new permissions by default. Disable or leave off optional auto-add, auto-close and status workflows for the pilot; inspect existing defaults, particularly close/reopen status syncing.
-6. Open Project menu **Settings → Fields** (or table **+ → New field**). Customize built-in **Status** with exactly: Submitted, Screening, Awaiting Approval, Awaiting Capacity, Preparing, Ready, Scheduled, Executed, Analyzing, Closed. Remove unused default status options only in this new sandbox. Configure additional fields using the exact specification in [project.json](../config/project.json). Built-in Title/Assignees/Labels remain available. A default status, if used, is Submitted; always set Disposition=Active and Work type explicitly at intake.
-7. Create the five views below with **New view**, choose layout, set filter in filter bar, choose group/sort in view menu and **Save changes**. If UI tokens differ, select field values from the filter picker; verify visible issues against the acceptance scenarios. No view is an authorization gate. Add new items through an unfiltered intake view: adding items inside a filtered view may populate filtered fields automatically; review Status and gate evidence before using those values.
-8. After approval to create DEMO issues, submit [A/B/C examples](../examples/README.md) with `demo` label. Add them to the Project through issue sidebar **Projects** or Project **Add item**. Populate fields, link parent tests/requirements, copy gate record template and run the acceptance scenarios. Preparation tasks use native sub-issues where available; otherwise use a parent task-list/full issue link and backlink. Never move existing issues.
-9. Check archive access with the intended reader only when authorized Drive links exist. Run local validation and record the manual sandbox results in [PILOT_TEST_PLAN](../PILOT_TEST_PLAN.md). Leadership reviews the complete pilot before any rollout or permission changes.
+## Fields and statuses
 
-## Fields and responsibilities
+[project.json](../config/project.json) lists exact names, types, options, ownership and views; it is a specification, not an API export or a live Project. Keep detailed decisions and evidence on the parent issue rather than duplicate every sign-off as a Project field.
 
-[project.json](../config/project.json) is the exact reproducible specification, not a deployed Project export. Built-in Assignees identify current work owners, not approvers. Text owner fields are searchable names/handles without granting access.
-
-| Fields | Type | Maintainer |
+| Field group | Fields | Maintainer |
 | --- | --- | --- |
-| Status, Disposition, Work type | Single select | Testing Manager from issue records |
-| Subsystem | Single select | Requesting lead; confirm roster on rollout |
-| Priority | Single select | Leadership; qualitative rationale, no aggregate score |
-| Preparation effort, Instrumentation category | Single select | Relevant resource/instrumentation owner |
-| Resource team, Parent test | Text | Resource manager/work owner; linked prep per team where useful |
-| Test ID, Test day, Gate record | Text | Testing Manager; Gate record links canonical parent comment |
-| Requirement IDs | Text | Subsystem lead; Markdown DVP&R is canonical |
-| Test Lead, Instrumentation owner, Analysis owner | Text | Named during planning with responsible managers/leads |
-| Prep due, Target test date, Analysis due | Date | Committed work owner, Testing Manager, analysis owner/lead respectively |
+| Workflow | Status; Disposition; Work type | Testing Manager from issue records |
+| Prioritization | Subsystem; Priority | Subsystem Lead; Managers |
+| Preparation | Preparation effort; Instrumentation category; Resource team; Parent test; Prep due | Resource manager / Instrumentation Owner |
+| Identity and responsibility | Test ID; Requirement IDs; Test Lead; Instrumentation Owner; Analysis Owner; Gate record | Testing Manager with responsible owners |
+| Dates | Target test date; Test day; Analysis due | Testing Manager / Analysis Owner and Subsystem Lead |
 
-Disposition options: Active, Clarification, Deferred, Declined, Cancelled. Keep last meaningful stage for clarification/deferred work and record resolution/re-screening needs. Declined/cancelled attempts can use Closed after documented disposition; do not fabricate readiness or execution. Reopening records reason and returns to the appropriate stage. Preparation issues use Submitted/Awaiting Capacity/Preparing/Ready/Closed as applicable, never pretend they were vehicle runs. Ready means deliverable ready for parent integration; Closed means accepted by its owner. Parent readiness still needs integrated evidence.
+Status: **Submitted → Screening → Awaiting Approval → Awaiting Capacity → Preparing → Ready → Scheduled → Executed → Analyzing → Closed**. The phase may revisit earlier states. Ready requires installed technical evidence; Scheduled is a confirmed day after readiness. Target test date can be tentative; leave Test day empty until confirmed. Neither Ready nor Scheduled authorizes operation. Managers resolve time conflicts.
 
-Instrumentation categories: Ready; Existing needs adaptation; New development; Unknown feasibility; No instrumentation support. Last category must distinguish no DAQ needed from support unavailable; it never waives evidence. Effort is Low/Medium/High, independent of operational safety risk and technical complexity assessed in the plan.
+Disposition: Active, Clarification, Deferred, Declined, Cancelled. Keep the last meaningful phase during clarification/deferment, with reasons/review triggers in the issue. Declined/cancelled work may close with documented disposition, never fabricated execution. Preparation issues use relevant Submitted/Awaiting Capacity/Preparing/Ready/Closed states: their Ready means a deliverable is ready for integration, not the parent test ready for operation.
+
+Instrumentation category: Ready, Existing needs adaptation, New development, Unknown feasibility, No instrumentation support. Clarify whether the last means no instrumentation needed or no support available. Effort low/medium/high is not a capacity plan or a safety-risk rating. Resource managers acknowledge actual capacity before Managers authorize preparation. [Decision handling](guides/approvals.md).
 
 ## Views
 
-| View | Layout / filter | Group / sort / visible columns |
+All operational views exclude `demo` to avoid treating examples as team work.
+
+| View | Layout and filter | Group / sort / useful columns |
 | --- | --- | --- |
-| Pipeline | Board; `"Work type":Test Disposition:Active` | Status; show priority, subsystem, target date |
-| Preparation workload | Table; `"Work type":Preparation Disposition:Active` | Resource team / Prep due; show owner, Parent test, effort, Status and Gate record |
-| Next testing day | Table; `"Work type":Test Disposition:Active status:Ready,Scheduled` | Test day / Target test date; show Test Lead, instrumentation owner, Gate record; narrow to selected day |
-| Analysis & closure | Table; `"Work type":Test Disposition:Active status:Executed,Analyzing` | Analysis owner / Analysis due; show requirement IDs and parent evidence |
-| Subsystem/DVP&R overview | Table; `"Work type":Test` | Subsystem; show Requirement IDs, Status, Disposition, Gate record; link Markdown coverage tables |
+| Pipeline | Board; `"Work type":Test Disposition:Active -label:demo` | Status; Subsystem, Priority, Target test date |
+| Preparation workload | Table; `"Work type":Preparation Disposition:Active -label:demo` | Resource team / Prep due; Assignees, Parent test, effort, Status, Gate record |
+| Confirmed testing | Table; `"Work type":Test Disposition:Active status:Scheduled -label:demo` | Test day / Target test date; Test Lead, Instrumentation Owner, Gate record |
+| Analysis backlog | Table; `"Work type":Test Disposition:Active status:Executed,Analyzing -label:demo` | Analysis Owner / Analysis due; Requirement IDs, Gate record |
+| Subsystem/DVP&R overview | Table; `"Work type":Test -label:demo` | Subsystem; Requirement IDs, Status, Disposition, Gate record |
 
-Always inspect Markdown DVP&R for requirements without test issues; the Project cannot show missing coverage automatically. Active preparation workload intentionally includes blocked/uncommitted tasks; read parent commitments for actual capacity/WIP. Use Disposition field filters for deferred/declined/cancelled review rather than hiding them permanently. Labels only aid search; field/label divergence is resolved by documented issue decisions.
+Confirmed testing intentionally excludes Ready backlog. Select a specific Test day for a single confirmed day. Preparation workload includes blocked/uncommitted tasks; consult parent commitments for actual allocation. Review deferred/declined/cancelled work through Disposition filters. DVP&R Markdown also shows requirements with no issue; a Project cannot expose missing coverage automatically.
 
-## What can be automated, and what remains manual
+## API boundaries and implementation defaults
 
-Repository file upload/PRs, labels and issue creation can use GitHub REST/CLI after authorization. Projects use GraphQL: create project (`createProjectV2`), add supported custom fields (`createProjectV2Field`), add issues (`addProjectV2ItemById`) and update supported item fields (`updateProjectV2ItemFieldValue`) with actual node/field/option IDs. This pilot includes no mutation script; JSON files are specifications, not executable API payloads. API availability/authentication must be checked for the selected account. Do not put credentials in repository files.
+Repository files/PRs, labels and issues can be managed through REST/CLI after authorization. Projects use GraphQL for supported project/field/item mutations with actual node/option IDs; these JSON files cannot be posted as API payloads. Creation normally needs Project write authority (for classic tokens, `project`; organization queries may also need `read:org`); a read scope is not write permission. Stop on missing permissions, never refresh/broaden credentials without approval.
 
-Manually configure and verify views, layout/filter/sort, default Status options, visibility/access, workflows and any organization-specific rules in the UI. Project/field/view capabilities evolve; use current API schema if later scripting them. UI names can vary. Filter references: [GitHub filtering documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/filtering-projects). Authoritative sources: [Projects API](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects) and [issue form syntax](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema), checked 2026-10-15.
+Configure and verify visibility/access, built-in status options, views/filter/layout/sort and workflow defaults manually. Capabilities may change. References checked 2026-10-15: [Issue Forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms), [form schema](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema), [Project filters](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/filtering-projects) and [Projects API](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects).
 
-Human actions cannot be automated into authority: confirm requester role, assess test value, commit resources/WIP, sign configuration-specific readiness, give joint on-site go/no-go and approve conclusions. GitHub required fields help completeness but do not prove roles or approval; verify actual private-repository enforcement during sandbox testing and retain lead completeness review. Do not broaden write access to enforce this process.
+The approved process is in [standards](standards/testing-lifecycle.md). Proposed implementation defaults are these fields/views/labels, issue-derived IDs, record locations, reminder cadence and raw-retention duration. Managers confirm them at adoption. There is no approval automation or role-verification bot; broad write access is not a substitute for governance.

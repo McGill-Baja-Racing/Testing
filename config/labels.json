@@ -22,7 +22,7 @@
   {
     "name": "declined",
     "color": "B60205",
-    "description": "Value decision declined; see record"
+    "description": "Managers declined test value; see record"
   },
   {
     "name": "cancelled",
@@ -32,6 +32,6 @@
   {
     "name": "demo",
     "color": "0E8A16",
-    "description": "Fictional pilot exercise; never real authorization"
+    "description": "Fictional example exercise; never real authorization"
   }
 ]

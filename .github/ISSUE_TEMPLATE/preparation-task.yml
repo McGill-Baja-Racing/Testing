@@ -7,9 +7,10 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: Use for medium/high effort work. Filing or assigning this issue does not
-      commit resources. Resource manager must acknowledge scope, capacity, owner and
-      dates on the parent gate record. Low effort can stay a checklist.
+    value: Use for linked medium/high preparation work. Assignment is not a capacity
+      commitment. Resource managers confirm capacity before Managers authorize this
+      defined work. Link the parent decisions; this task does not authorize vehicle
+      operation.
 - type: input
   id: parent
   attributes:
@@ -49,8 +50,8 @@ body:
   id: estimate
   attributes:
     label: Estimate, capacity and dates
-    description: Owner estimate/range, availability and proposed due date; uncommitted
-      until manager acknowledges.
+    description: Estimate/range, allocated capacity and due date. Resource manager
+      must acknowledge commitment before Managers authorize the defined work.
   validations:
     required: true
 - type: textarea

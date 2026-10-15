@@ -1,26 +1,37 @@
-# Testing lifecycle — approved Stage 1
+# Testing lifecycle
 
-Subsystem leads formally request tests; leadership or testing management identifies gaps through the appropriate lead. The lead checks request completeness. Relevant teams may return a request for precise clarification of physical measurements, outputs, decision or timing.
+This is the approved testing process. Project statuses are an implementation aid; documented decisions authorize work.
 
-| Step | Required evidence and authority | Proposed Project status |
+## Request and screen
+
+Only a **Subsystem Lead** formally requests a test in GitHub. Other members and Managers raise needs through the appropriate Subsystem Lead. The request states question, physical measurements, outputs, intended decision, sufficient evidence, why the test matters, consequences of not testing and preferred/latest useful timing. The Subsystem Lead confirms completeness; the Testing Manager reviews clarity/testability without changing the objective unilaterally.
+
+Relevant specialists, including Electronics, quickly screen feasibility before prioritization: instrumentation category, low/medium/high preparation effort, tasks, dependencies, uncertainty and rough lead time. They may return precise clarification questions. Screening is not a resource commitment. [Request guide](../guides/subsystem-lead.md).
+
+## Five distinct gates
+
+| Gate | Who decides | Required record before advancing |
 | --- | --- | --- |
-| Request | Question, measurements, outputs, decision, consequences; requirement and timing where known | Submitted |
-| Preliminary screen | Instrumentation category, low/medium/high effort, main tasks, rough lead time, dependencies and uncertainty; no commitment | Screening |
-| Prioritization | Leadership considers performance, safety, urgency, effort and available resources at regular meetings; representative records an individual decision | Awaiting Approval |
-| Bounded investigation if needed | Explicit scope, cap, deliverable and stopping/review point; relevant resource manager commits only that work | Awaiting Capacity then Preparing |
-| Full preparation | Separate authority for preparation plus each resource manager's capacity/owner/date acknowledgment | Awaiting Capacity then Preparing |
-| Readiness | Installed equipment, procedure, calibration/reference checks, signal chain and integrated dry run where applicable/safely feasible; technical sign-offs | Ready |
-| Confirm day | Testing Manager schedules only prepared tests and resolves people/equipment/site conflicts | Scheduled |
-| Execute | Joint subsystem-lead + Testing-Manager go/no-go subject to safety/technical clearance; Test Lead directs and records runs | Executed |
-| Analyze | Named analysis owner and planning-time due date; subsystem owns conclusions, electronics supports processing/data quality | Analyzing |
-| Close attempt | Lead approves conclusions and Testing Manager checks records; validity and requirement outcomes remain separate | Closed |
+| 1. Test-value approval | Managers; designated test-approval Manager or any substituting Manager records it | Individual approve/defer/decline decision with rationale, scope, identity and date after screening |
+| 2. Bounded feasibility authorization, when needed | Managers, after relevant resource managers confirm capacity for that investigation | Question, cap, defined work/deliverable and stop/review point; no implied full-development approval |
+| 3. Preparation authorization | Managers, **after resource managers confirm capacity and commit defined work** | Team, owner, work scope, allocated availability/effort, due dates, dependencies and manageable simultaneous-work limit |
+| 4. Technical readiness | Relevant technical owners, including the Instrumentation Owner; Testing Manager coordinates | Procedure/equipment/installation/calibration, units/timebase/logging and successful installed integrated verification where applicable |
+| 5. Final execution go/no-go | Subsystem Lead **and** Testing Manager jointly, subject to mandatory technical/safety clearance | On-site configuration/conditions, clearance and both decision-makers' identity/date |
 
-An approval does not imply the next approval. A leadership member may substitute for the designated testing-approval representative. Urgent new diagnostics still require leadership approval; Testing Manager and affected leads may rearrange previously approved tests. Immediate stopping, safety inspections and securing the vehicle never wait for approval.
+An earlier gate never implies a later gate. Keep [decision records](../../templates/approval-record.md) on the parent test issue. A known method may mark gate 2 N/A with a reason. Investigation capacity and authorization do not commit full development. At the cap stop and review; any expanded work needs renewed capacity and authorization.
 
-For uncertain/complex instrumentation, investigate feasibility within explicit limits before full development. Resource managers define capacity and work-in-progress limits; effort classes alone are not a capacity plan. Medium/high effort needs linked tasks; low effort uses a checklist. Three to four weeks is normal planning expectation for significant tests, not a ban on smaller/urgent work. Keep a long-term backlog; confirm each testing day individually.
+## Prepare and schedule
 
-After configuration changes the Testing Manager defines reassessment scope with relevant technical/safety owners. Significant scope changes return to screening and reauthorization where needed. Anyone can stop for safety; only proper clearance permits resumption. A scheduled test still requires on-site checks.
+The Testing Manager coordinates; named technical owners prepare. Low-effort work may stay a checklist. Medium/high work needs linked preparation issues. Name the **Test Lead**, **Instrumentation Owner**, **Analysis Owner** and analysis due date during planning. Resource managers decide how much simultaneous work their teams can manage.
 
-Attempt outcomes are valid, inconclusive, invalid or aborted. A valid result can show design PASS or FAIL. Invalid/inconclusive attempts create linked follow-ups for unresolved objectives; requirements remain unverified. Aborted work records unresolved objectives and follow-up or explicit disposition. Subsystem owns analysis deadlines: reminder, then escalation if overdue.
+Only fully technically prepared tests enter the confirmed day. Integrated verification must succeed where applicable; if unsafe/inapplicable, record the reason, alternative evidence and required technical/safety clearance. A possible test may remain in a backlog/planning view, never labeled confirmed/ready. Managers resolve time conflicts. Three to four weeks is a normal expectation for significant tests, not a ban on small or urgent requests.
 
-[Approval records](../../templates/approval-record.md) · [operations](../guides/testing-day.md) · [closure](../guides/closure.md)
+Configuration changes after readiness require the Testing Manager's reassessment with relevant technical/safety owners; repeat affected checks. Significant scope changes return to screening and revised authorization as needed. Alternative methods must answer the original question; new investigations from unexpected observations require new linked requests.
+
+## Execute, analyze and close
+
+The Test Lead follows the plan and records every run, including deviations and raw references. Check data after each run when feasible, at minimum before leaving where practicable. Preserve originals, metadata and evidence links. [Day operations](../guides/testing-day.md).
+
+The subsystem owns analysis and conclusions; Electronics/Instrumentation Owner supports measurement quality. The Testing Manager tracks deadlines with reminder then escalation and checks documentation; the Subsystem Lead approves engineering interpretation. Close attempts as valid, inconclusive, invalid or aborted. A valid result may show design PASS or FAIL, or an exploratory finding. Invalid/inconclusive attempts need linked follow-ups for unresolved objectives; relevant requirements remain unverified. [Closure](../guides/closure.md).
+
+Urgent new tests still need individual Manager approval. The Testing Manager and affected leads may rearrange already approved work. Anyone can stop unsafe work; resume only after proper clearance and renewed joint go/no-go. Stopping, inspecting and making safe never wait for paperwork.

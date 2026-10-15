@@ -1,12 +1,14 @@
-# Fictional request set
+# Example journeys
 
-**Every identity, date, capacity decision, result and approval in these examples is DEMO. Nothing is scheduled, actually approved or verified.** Copy requester fields into an authorized sandbox's Test request form; add the illustrative subsequent records as issue comments only during an authorized exercise.
+**DEMO / EXAMPLE only.** All identities, requirements, values, dates, resources, decisions and outcomes are fabricated. No example is an approved request, usable calibration, real raw measurement or verified team requirement. Historical `TST-DEMO-*` IDs are reserved for these examples.
 
-- [A — existing validated engine RPM, simple](requests/engine-rpm.md)
-- [B — brake pressure adaptation, moderate](requests/brake-pressure.md)
-- [C — half-shaft strain gauges, high development](requests/half-shaft-strain.md)
-- [Linked moderate preparation](preparation/brake-adaptation.md)
-- [Linked bounded feasibility](preparation/strain-feasibility.md)
-- [Invalid-run follow-up](follow-up.md) and [DEMO run log](run-log.csv)
+| Journey | Learn |
+| --- | --- |
+| [Simple engine RPM](requests/engine-rpm.md) | Short request → low-effort checklist → contextual readiness → exploratory result |
+| [Installed brake pressure](requests/brake-pressure.md) | Medium effort, two resource teams, adaptation and invalid evidence |
+| [Half-shaft strain](requests/half-shaft-strain.md) | Bounded feasibility → review → separately committed/authorized full preparation |
+| [Invalid-attempt follow-up](follow-up.md) | Close a documented attempt without verifying a requirement; request retest |
 
-The walkthrough's event sequences show how decisions would be recorded; they do not change DVP&R state. Each DVP&R remains not planned in this deliverable. [Walkthrough](../docs/walkthrough.md).
+Supporting records: [medium task](preparation/brake-adaptation.md), [bounded task](preparation/strain-feasibility.md), [conditional full-preparation task](preparation/strain-integration.md), [equipment/calibration](instrumentation.md), [DVP&R](../verification/subsystems/drivetrain.md), [vehicle evidence gap](vehicle-validation.md), [run log](run-log.csv) and [archive explanation](data/README.md).
+
+Copy form-field answers only into an explicitly authorized exercise; keep `demo` label and prominent disclaimers. Existing private GitHub demonstration issues are not modified by this local revision. [Walkthrough](../docs/walkthrough.md).

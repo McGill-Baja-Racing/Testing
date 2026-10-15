@@ -1,14 +1,21 @@
-# Device installation / calibration / readiness record
+# Equipment and installation record
 
-Record ID and immutable revision; supersedes; author/date: TBD.
+Required for each physical device/installation used for measurement. Calibration detail lives in the linked [calibration record](calibration-record.md), not duplicated here.
 
-- Model ID and datasheet revision; physical device ID, serial/asset ID; custodian/location; condition/history:
-- Installation ID; test/configuration/intended quantity/location; mechanical/wiring details; environment; firmware/DAQ settings and units/timebase:
-- Calibration/reference procedure and version; operator/date; reference device/certificate ID, traceability chain and reference validity:
-- Calibration points/conditions, original evidence links; coefficients/units; uncertainty and limitations:
-- Validity period OR use/condition triggers and rationale; next review trigger; invalidation conditions:
-- Installed integrated verification method/results/evidence (or justified alternate when unsafe/inapplicable):
-- Contextual readiness: pending / acceptable for specified use / blocked; intended-use limits; technical owner identity/date/comment:
-- Reassessment after changes, affected tests, superseded sign-offs and new evidence:
+## Equipment identity — required
 
-No model-level global ready flag substitutes for this record. [Inventory](../instrumentation/inventory.md).
+- Model/capability reference and datasheet revision:
+- Unique physical device ID; manufacturer serial/asset identifier; custodian/location:
+- Availability/condition; maintenance/damage history:
+
+## Installation and intended use — required when installed
+
+- Installation ID and record revision; author/date; superseded version:
+- Test/configuration references; quantity/location, range, environment and intended decision:
+- Mounting/wiring/interface; firmware/DAQ settings, channels, units and timebase:
+- Calibration record ID/revision; validity for this use; limits/uncertainty reference:
+- Installed end-to-end verification method/results/evidence (or reason, alternate evidence and required clearance if unsafe/inapplicable):
+- Contextual readiness: pending / acceptable for specified use / blocked; limitations; technical owner identity/date/comment:
+- Change/reassessment triggers; affected tests and superseded sign-offs:
+
+Optional supporting material: photographs, diagrams and maintenance attachments. Availability alone never establishes readiness. [Inventory](../instrumentation/inventory.md).

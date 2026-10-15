@@ -1,11 +1,19 @@
-# Testing-day operations
+# Testing-day checklist
 
-Testing Manager prepares each day separately from the longer backlog. Confirm only Ready tests with named people, equipment, site access, dependency completion and capacity. Publish test-day ID, order, time windows and fallback plan in the relevant test issues/Project view; requested dates stay tentative. Reordering approved tests requires Testing Manager plus affected leads.
+## Confirm the day
 
-Before execution, Test Lead confirms current plan/configuration, owners, hazards, stop conditions, communication/emergency procedure, readiness evidence and storage. Changes go to Testing Manager and relevant technical/safety owners for reassessment. Requesting subsystem lead and Testing Manager record joint final go/no-go subject to those clearances. A Ready/Scheduled field is insufficient.
+The Testing Manager confirms only tests with completed technical readiness, named people and available equipment/site. Keep speculative future dates in backlog/planning. Managers resolve testing-time conflicts; the Testing Manager and affected leads may rearrange previously approved work. [Lifecycle](../standards/testing-lifecycle.md).
 
-Allocate unique run IDs before collecting data. Record actual timestamps/time zone, configuration, conditions, observations, deviations and raw links in the [CSV log](../../templates/run-log.csv). Keep aborted/invalid runs. Check units/scaling, timebase, saturation/dropout, file readability and expected physical behavior after each run where feasible; at least review before leaving where practical. Record any impractical check and mitigation. Preserve raw files immediately.
+## Before a run
 
-Anyone may call stop. Test Lead secures the operation, records reason/time/run and alerts relevant owners. Resume only after concern resolution, required technical/safety clearance and renewed joint go/no-go. Never extend scope to a new urgent test without its leadership approval.
+Test Lead checks the current plan, actual configuration/conditions, personnel, required technical/safety clearance, hazards/stop rules, communications, storage and run IDs. Changes go to the Testing Manager and relevant technical/safety owners for reassessment and affected checks. Record the Subsystem Lead and Testing Manager's joint go/no-go. A confirmed schedule is not operational authority.
 
-Before leaving: account for equipment and files, copy/preserve raw originals, complete logs, identify invalid/inconclusive runs and unresolved objectives, confirm analysis owner/due date and record deviations. [Data conventions](../data-storage.md).
+## During testing
+
+Log actual start/end timestamps, configuration, conditions, observations/deviations, raw references and calibration version for every run in the [run log](../../templates/run-log.csv). Check units/scaling, timebase, saturation/dropout, file readability and physical plausibility after each run when feasible, at minimum before leaving where practicable. Record impracticable checks and mitigation.
+
+Anyone may stop unsafe work. Secure the operation; log reason/time/run and notify relevant owners. Resume only after concern resolution, mandatory technical/safety clearance and renewed joint go/no-go. A new investigation requires a linked request and Manager approval; do not extend scope on site.
+
+## Before leaving and handoff
+
+Account for equipment, preserve all raw originals including invalid/aborted runs, complete logs/configuration/deviations, confirm file access and Analysis Owner/due date. [Storage](../data-storage.md) · [Test Lead guide](test-lead.md) · [Closure](closure.md).

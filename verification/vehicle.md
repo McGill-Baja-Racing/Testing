@@ -1,13 +1,8 @@
-# Vehicle-level validation overview — DEMO
+# Vehicle validation overview
 
-Leadership maintains this compact overview and reviews coverage/risks at design milestones. All entries are hypothetical; no requirements, limits, deadlines or verification are approved here. Relevant subsystem leads formally request each test.
+Managers own this compact register and review coverage at major design milestones: performance, reliability, integration, durability and safety. No real vehicle requirements or evidence have been supplied for this revision. Enter owner-defined requirements/criteria; do not copy fictional limits as team targets. Subsystem Leads formally submit any resulting requests.
 
-| Requirement ID | Description | Owner | Method | Acceptance criteria | Rationale/reference | Target milestone | Test/analysis links | Evidence + applicability | Status |
+| Requirement ID | Description | Owner | Method | Acceptance criteria | Rationale/reference | Target milestone | Work/evidence links | Configuration/conditions/applicability | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DEMO-VEH-01 | Performance under representative operating conditions | Leadership + relevant lead TBD | test | TBD by owners | TBD | DEMO milestone TBD | None | None | not planned |
-| DEMO-VEH-02 | Reliability over intended duty | Leadership + relevant lead TBD | test + analysis | TBD | TBD | TBD | None | None | not planned |
-| DEMO-VEH-03 | Integrated sensors and vehicle functions support decisions | Leadership + electronics lead TBD | demonstration + test | TBD | TBD | TBD | None | None | not planned |
-| DEMO-VEH-04 | Durability in intended environment | Leadership + relevant lead TBD | test + inspection | TBD | TBD | TBD | None | None | not planned |
-| DEMO-VEH-05 | Braking safety evidence for intended conditions | Leadership + brakes lead TBD | test + inspection | TBD; no invented safety threshold | TBD | TBD | [Pressure adaptation](../examples/requests/brake-pressure.md) | None | not planned |
 
-Prioritization discussion records severity, uncertainty, prior failures, evidence gap, deadline, effort and capacity, without one combined score. [Drivetrain](subsystems/drivetrain.md) · [Suspension](subsystems/suspension.md) · [Strategy/status rules](../docs/standards/verification-strategy.md).
+Use [status definitions](../docs/standards/verification-strategy.md#what-a-row-records). Review severity, uncertainty, known failures, evidence gaps, deadline and effort without a combined numerical score. See [complete fictional subsystem rows](subsystems/drivetrain.md) and [index](README.md).

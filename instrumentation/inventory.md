@@ -1,30 +1,26 @@
-# Sensor inventory — DEMO only
+# Equipment inventory
 
-Models describe capability; device records track physical units; installation/calibration records establish contextual readiness. All capabilities, IDs and evidence below are hypothetical placeholders. No hardware specification or actual readiness is asserted.
+**Production register:** no real equipment records have been supplied for this revision. The Instrumentation Owner maintains the tables below as equipment is entered. Do not infer team stock or capability from [fictional examples](../examples/instrumentation.md).
 
-## Model/capability register
+## Model capabilities
 
-| Model ID | Manufacturer/model | Quantity | Range | Dynamic response/bandwidth | Accuracy/uncertainty basis | Interface/environment | Datasheet/version |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| MODEL-DEMO-RPM | TBD by owner | Engine speed | TBD | TBD | TBD for intended use | TBD | Not supplied |
-| MODEL-DEMO-PRESSURE | TBD by owner | Brake pressure | TBD | TBD | TBD | Compatibility/pressure/environment TBD | Not supplied |
-| MODEL-DEMO-STRAIN | TBD by owner | Half-shaft strain | TBD | TBD | TBD incl. torque conversion | Bonding/bridge/telemetry TBD | Not supplied |
+| Model ID | Manufacturer/model and datasheet revision | Quantity/range | Response/bandwidth | Accuracy/uncertainty basis | Interface/environment limits |
+| --- | --- | --- | --- | --- | --- |
 
-## Individual physical devices
+## Physical units and availability
 
-| Device ID | Model ID | Serial/asset ID | Custodian/location | Condition | Calibration record | Installation record |
-| --- | --- | --- | --- | --- | --- | --- |
-| DEV-DEMO-RPM-001 | MODEL-DEMO-RPM | DEMO-not-real | DEMO electronics | Unknown in reality | CAL-DEMO-001 | INST-DEMO-001 |
-| DEV-DEMO-P-001 | MODEL-DEMO-PRESSURE | DEMO-not-real | DEMO electronics | Unknown | Pending | Pending |
-| DEV-DEMO-S-001 | MODEL-DEMO-STRAIN | DEMO-not-real | DEMO electronics | Unknown | Pending | Pending |
+| Device ID | Model ID | Serial/asset ID | Custodian/location | Availability and condition | Calibration record/version |
+| --- | --- | --- | --- | --- | --- |
 
-## Installation/calibration/readiness records
+## Installation and readiness for intended use
 
-Use [record template](../templates/sensor-record.md) per device/install and link immutable record versions. Required calibration content: method/procedure version; date/operator; reference ID and traceability chain; reference validity; points/conditions and raw evidence; coefficients/units; uncertainty and limits; validity interval or usage/condition triggers with rationale. Do not assume a universal expiry period.
+| Installation ID/revision | Device ID | Test/configuration/intended use | Calibration validity/limits | Installed verification evidence | Readiness + technical owner/date |
+| --- | --- | --- | --- | --- | --- |
 
-| Record ID | Device/configuration | Method/evidence | Validity/traceability | Contextual readiness |
-| --- | --- | --- | --- | --- |
-| CAL-DEMO-001 | DEV-DEMO-RPM-001; DEMO historical configuration A | Hypothetical reference comparison; no real evidence | Reference ID/validity, date, uncertainty and limits all TBD; unusable as real calibration | Not established |
-| INST-DEMO-001 | DEV-DEMO-RPM-001; configuration A / intended engine-speed use | Hypothetical wiring, mounting and DAQ revision; all TBD | Must link calibration and installed signal-chain check | Not established in reality; example A assumes prior validated configuration solely for walkthrough |
+Create one [equipment/install record](../templates/sensor-record.md) per unit/installation and link its [calibration record](../templates/calibration-record.md). Use unique stable device IDs, including separate units of the same model. Retain superseded versions and damage/maintenance history. Calibration needs method, original evidence, reference traceability/validity, uncertainty, limits and a justified validity interval or condition/use triggers.
 
-Changing mounting, wiring, bridge bonding, firmware, scaling, sample settings, range, environment or intended use may invalidate integration readiness even if a device calibration remains valid. Testing Manager determines reassessment with instrumentation/technical/safety owners. A spare of the same model has a different device ID and requires its own records. Failed/damaged devices retain history and cannot inherit another unit's sign-off.
+**Available** means a unit can be allocated. **Ready for this test** means the actual unit, installed chain, configuration and intended use have the required evidence and technical sign-off. Neither model availability nor a calibration sticker proves readiness.
+
+Changing mounting, wiring, bonding, firmware, scaling, range, sample settings, environment or intended use can invalidate installed readiness. The Testing Manager determines reassessment with relevant technical/safety owners and repeats affected checks. A damaged device or replacement unit cannot inherit another unit's sign-off.
+
+Pending preparation: follow the linked tasks on each test or the [Preparation workload view](../docs/project-setup.md#views). Electronics Manager owns Electronics capacity commitments. [Instrumentation guide](../docs/guides/instrumentation.md).

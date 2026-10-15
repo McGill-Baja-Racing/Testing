@@ -1,26 +1,43 @@
-# Pilot acceptance plan
+# Repository acceptance scenarios
 
-Local checks are executable now; GitHub/manual scenarios below are pending an explicitly authorized sandbox. Every exercise item must be DEMO. No actual hardware operation is part of software acceptance.
+This filename is retained for existing links. The scenarios apply to the production revision. Run local validation with Python 3.9+ and Ruby's standard YAML library; no packages/network needed:
 
-Run `python3 scripts/validate.py` from root. It parses every YAML/JSON file, checks form structure/required fields and example completeness, label references, project specification, CSV schema/unique run IDs/timestamps, Markdown paths/anchors, required deliverables and unverified DEMO DVP&R states. Local file checks do not prove live permissions or GitHub UI rendering.
+```sh
+python3 scripts/validate.py
+python3 scripts/validate.py --self-test
+```
 
-| Scenario | Action | Expected evidence/result | State |
-| --- | --- | --- | --- |
-| YAML/JSON/CSV/links | Run validator | All checks pass; exit 0; report actual counts | See validation report |
-| Regression guards | Run validator self-test | Corrupted YAML, forms, CSV, relative paths/anchors and missing deliverables are rejected in temporary copies | See validation report |
-| Forms discovered | Authorized sandbox default branch → New issue | Both forms render; intended labels exist; blank chooser disabled; check required-field behavior on private repo | Pending manual |
-| Completeness/roles | Attempt missing question and non-lead submission | Required fields behave per GitHub; responsible lead still confirms completeness; no authority inferred | Pending manual |
-| A low-effort path | Submit engine RPM DEMO, screen, record staged decisions | No separate preparation issue required; no Ready before evidence; joint final decision stays separate | Pending manual |
-| B capacity blocker | Submit pressure DEMO and prep task; withhold one manager's commitment | Parent Awaiting Capacity; blocked work visible in workload; no inferred assignment commitment | Pending manual |
-| C feasibility boundary | Submit strain DEMO; authorize only capped investigation | Stops at cap/review; full preparation remains unauthorized; no Ready/scheduling | Pending manual |
-| Readiness vs schedule | Attempt schedule before installed evidence; then add hypothetical evidence | Governance review rejects early scheduling; fields alone cannot enforce or prove approval | Pending manual |
-| Change and safety stop | Change configuration / simulate stop | Reassessment scope documented; anyone may stop; proper clearance + renewed joint go/no-go before resume | Pending manual |
-| Invalid/inconclusive closure | Use DEMO R001 + follow-up; also exercise inconclusive outcome | Raw retained; validity separate from design result; unresolved requirement unverified; linked follow-up | Pending manual |
-| Valid failure | Simulate applicable valid evidence outside owner criteria | Attempt valid, design FAIL; requirement not verified-failed only with applicable evidence | Pending manual |
-| Overdue analysis | Set DEMO past due date; simulate reminder/check-in escalation | Named owner; reminder then documented escalation; no automation claimed | Pending manual |
-| Requirement coverage | Inspect subsystem/vehicle tables with no test issue | Unplanned requirements visible in Markdown even if absent from Project | Pending manual |
-| Reuse/N/A | Simulate prior evidence applicability and N/A decision | Configuration/conditions rationale or explicit N/A reason/owner; no automatic verification | Pending manual |
-| Disposition | Clarify, defer, decline/cancel fictional items | Canonical decisions preserved; fields/views reflect them; no fabricated execution | Pending manual |
-| Access/archive | Use authorized real link as reader when available | Intended access confirmed without unapproved sharing change; raw immutability conventions followed | Pending authorization/manual |
+Local automation checks file/form syntax, example field coverage and record references, links, CSV integrity, configured views and fictional DVP&R states. It does not execute GitHub approval gates or certify an engineering method. [Actual results](VALIDATION_REPORT.md).
 
-Manual exercise record template: scenario, sandbox URL, actor/date, action, observed behavior, evidence link, pass/fail/blocker, follow-up owner. Never mark these passed from a local validator. Production rollout requires separate approval after review.
+## Review the example flows locally
+
+| Scenario | Check | Required conclusion |
+| --- | --- | --- |
+| New Subsystem Lead | From README find request form and lead guide in two minutes | Role restriction, measurement need, timing and no implied approval are clear |
+| Manager review | Open Manager guide and decision index | Individual value decision; capacity first, then preparation authorization; five separate gates |
+| Simple RPM | Follow request → compact plan → logs → exploratory interpretation | Checklist suffices; no forced design threshold; readiness/go-no-go and closure are separate |
+| Medium pressure | Follow adaptation task, both resource owners and installed checks | Missing commitment blocks preparation; standalone calibration is insufficient |
+| Complex strain | Follow capped feasibility and conditional full-preparation task | Stop/review at cap; full development needs fresh commitments and separate Manager authorization |
+| Invalid attempt | Follow pressure mismatch → retained sample log → linked follow-up → DVP&R gap | Process violation identified; no design FAIL or verified requirement inferred |
+| Electronics navigation | From README locate availability, calibration and pending work | Available differs from ready for this installation/test |
+
+## Manual checks after separately authorized deployment
+
+All are **pending** for this revision. Previous DEMO issue creation does not pass revised-form checks. Record scenario/date/actor/URL, observed result and evidence; use only authorized DEMO records and never actual vehicle operation for software acceptance.
+
+| Scenario | Action and expected behavior |
+| --- | --- |
+| Forms | On approved default branch, open New issue and both forms. Verify visible labels/descriptions, multiline fields, dropdown choices, required-field behavior including timing, and labels on submission. Check non-lead submission still requires governance review; no identity enforcement is claimed. |
+| Simple path | Exercise low-effort checklist without separate prep issue. Explicit gate comments precede corresponding stage changes. |
+| Capacity | Withhold one medium-task manager commitment; keep Awaiting Capacity. Do not infer commitment from assignment. Managers authorize defined preparation only after commitments. |
+| Feasibility | Authorize only a bounded DEMO investigation with capacity/cap. Review at cap; no automatic development/Ready promotion. |
+| Project views | Configure per specification. Confirm only Scheduled tests appear in Confirmed testing, Ready remains backlog, DEMO excluded operationally, workload includes blockers, analysis sorted by due date. Verify actual filter-picker syntax. |
+| Change/stop | Simulate post-readiness configuration change: reassessment/repeated affected checks before readiness restored. Anyone can stop; proper clearance and renewed joint go/no-go before resume. |
+| Valid failure | Simulate applicable valid data failing justified criteria: attempt valid, design FAIL, requirement not verified-failed only with applicable evidence. |
+| Inconclusive/invalid | Preserve originals, record limitations and linked unresolved-objective follow-up, leave requirements unverified. Lead approves interpretation and Testing Manager checks closure records. |
+| Deadline | Simulate overdue analysis: named owner receives reminder, then unresolved work escalates to Subsystem Lead/Managers. No automation claimed. |
+| Evidence reuse/coverage | Show unplanned requirement with no issue in DVP&R; require configuration/conditions justification for reused evidence and owner/reason for N/A. |
+| Disposition | Clarify/defer/decline/cancel DEMO work: reasons preserved, appropriate earlier status, no fabricated execution. |
+| Archive/access | Only with separate Drive consent: verify actual links and intended reader access, manifest/original retention, and backup/custodian without unapproved sharing changes. |
+
+Managers review practical results before adoption. [Deployment boundary](HANDOFF.md).

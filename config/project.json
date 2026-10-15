@@ -1,5 +1,4 @@
 {
-  "pilot_only": true,
   "project_name": "Testing Management",
   "fields": [
     {
@@ -51,7 +50,7 @@
         "Vehicle integration",
         "Other"
       ],
-      "owner": "Requesting lead; options confirmed on rollout"
+      "owner": "Subsystem Lead; options confirmed on rollout"
     },
     {
       "name": "Priority",
@@ -62,7 +61,7 @@
         "Medium",
         "Low"
       ],
-      "owner": "Leadership"
+      "owner": "Managers"
     },
     {
       "name": "Preparation effort",
@@ -84,7 +83,7 @@
         "Unknown feasibility",
         "No instrumentation support"
       ],
-      "owner": "Instrumentation owner"
+      "owner": "Instrumentation Owner"
     },
     {
       "name": "Resource team",
@@ -94,7 +93,7 @@
     {
       "name": "Test ID",
       "type": "text",
-      "owner": "Testing Manager allocation"
+      "owner": "Testing Manager; derive from parent test issue number"
     },
     {
       "name": "Parent test",
@@ -104,7 +103,7 @@
     {
       "name": "Requirement IDs",
       "type": "text",
-      "owner": "Subsystem lead; DVP&R remains canonical"
+      "owner": "Subsystem Lead; DVP&R remains canonical"
     },
     {
       "name": "Test Lead",
@@ -112,14 +111,14 @@
       "owner": "Testing Manager"
     },
     {
-      "name": "Instrumentation owner",
+      "name": "Instrumentation Owner",
       "type": "text",
       "owner": "Resource manager"
     },
     {
-      "name": "Analysis owner",
+      "name": "Analysis Owner",
       "type": "text",
-      "owner": "Subsystem lead"
+      "owner": "Subsystem Lead"
     },
     {
       "name": "Prep due",
@@ -134,12 +133,12 @@
     {
       "name": "Test day",
       "type": "text",
-      "owner": "Testing Manager; explicit day ID"
+      "owner": "Testing Manager; assign confirmed day only after technical readiness"
     },
     {
       "name": "Analysis due",
       "type": "date",
-      "owner": "Analysis owner + subsystem lead, during planning"
+      "owner": "Analysis Owner + Subsystem Lead, during planning"
     },
     {
       "name": "Gate record",
@@ -151,38 +150,40 @@
     {
       "name": "Pipeline",
       "layout": "board",
-      "filter": "\"Work type\":Test Disposition:Active",
+      "filter": "\"Work type\":Test Disposition:Active -label:demo",
       "group_by": "Status"
     },
     {
       "name": "Preparation workload",
       "layout": "table",
-      "filter": "\"Work type\":Preparation Disposition:Active",
+      "filter": "\"Work type\":Preparation Disposition:Active -label:demo",
       "group_by": "Resource team",
       "sort_by": "Prep due",
       "note": "Keep all active tasks visible, including blocked work. Inspect manager commitments and capacity in parent records."
     },
     {
-      "name": "Next testing day",
+      "name": "Confirmed testing",
       "layout": "table",
-      "filter": "\"Work type\":Test Disposition:Active status:Ready,Scheduled",
+      "filter": "\"Work type\":Test Disposition:Active status:Scheduled -label:demo",
       "group_by": "Test day",
       "sort_by": "Target test date",
-      "note": "Select one explicit test-day ID to review a single day; Ready is not booked until Scheduled."
+      "note": "Only technically ready tests may become Scheduled; select one confirmed day. Ready backlog is not a confirmed schedule."
     },
     {
-      "name": "Analysis & closure",
+      "name": "Analysis backlog",
       "layout": "table",
-      "filter": "\"Work type\":Test Disposition:Active status:Executed,Analyzing",
-      "group_by": "Analysis owner",
+      "filter": "\"Work type\":Test Disposition:Active status:Executed,Analyzing -label:demo",
+      "group_by": "Analysis Owner",
       "sort_by": "Analysis due"
     },
     {
       "name": "Subsystem/DVP&R overview",
       "layout": "table",
-      "filter": "\"Work type\":Test",
+      "filter": "\"Work type\":Test -label:demo",
       "group_by": "Subsystem",
       "note": "Show Requirement IDs and links; Markdown DVP&R holds coverage/status including requirements with no issues."
     }
-  ]
+  ],
+  "configuration_status": "proposed; not applied",
+  "approval_source": "dated decisions on parent test issue; not Project fields"
 }

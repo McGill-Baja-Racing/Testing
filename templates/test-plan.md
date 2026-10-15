@@ -1,37 +1,25 @@
-# Modular test plan
+# Common test plan
 
-## Required core
+Use on the parent issue or as a linked versioned document. **Complete the core for every test; link existing request/decision/equipment records rather than copy them.** A simple test can use one short paragraph per item. [Filled simple plan](../examples/requests/engine-rpm.md#working-plan).
 
-- Stable test ID / parent issue / plan revision / author and date:
-- Purpose and engineering question; measurements; expected outputs; intended decision:
-- Requirement IDs/references; evidence sufficiency; acceptance criteria and traceable rationale where appropriate (exploratory: question + sufficient evidence, no forced threshold):
-- Requesting subsystem lead / Testing Manager / Test Lead / instrumentation owner / analysis owner:
-- Analysis due date agreed during planning; reporting depth:
-- Configuration: vehicle/component revisions, firmware/code commit, settings, equipment and physical device IDs, installation/calibration record versions:
-- Technical complexity and rationale; separate operational safety risk assessment:
-- Personnel, equipment, site and operating conditions; controlled variables and recorded uncontrolled conditions:
-- Hazards, controls, stop conditions, safety/technical clearance owners; emergency/site procedure reference:
-- Procedure in numbered steps; run/repeat plan and justification; required records; abort/resume procedure:
-- Low-effort preparation checklist OR medium/high linked tasks and dependencies:
-- Readiness evidence, integrated verification/dry run applicability and safe method; owner sign-off links:
-- Gate record link; planned test day (tentative until ready); final joint go/no-go record:
-- Raw archive placeholder, run-log location, naming, data-quality checks and preservation responsibility:
-- Analysis method, uncertainty/limitations and conclusion review:
+## Core — required
 
-## Instrumentation detail — complete when measurements are used
+1. **Identity and objective:** test ID, parent issue, plan revision/author/date; link the question, physical measurements, outputs/decision, sufficient evidence and relevant requirements. Record applicable criteria/basis before interpreting results, or explain the exploratory question.
+2. **People and timing:** Subsystem Lead, Testing Manager, Test Lead, Instrumentation Owner (or justified N/A), Analysis Owner and agreed analysis due date; equipment/personnel availability; tentative versus confirmed day.
+3. **Configuration and conditions:** component/vehicle and firmware/settings revisions; physical device, installation/calibration references; environment/operating envelope, controlled and recorded uncontrolled conditions.
+4. **Risk and procedure:** separate technical complexity and operational safety risk; required technical/safety owners, hazards/controls, stop/resume conditions; numbered steps; runs/repeats and rationale; expected observations/records.
+5. **Measurement quality:** placement/range, uncertainty/basis, temporal response/bandwidth/sample rate, interface/units/timebase/logging as relevant; specialist-owned specification; calibration/reference and installed integrated verification method. Link existing equipment records.
+6. **Preparation and readiness:** low-effort checklist OR medium/high linked tasks; dependencies; parent gate-record link; [readiness evidence](readiness-checklist.md); any unsafe/inapplicable check's reason, alternate evidence and clearance.
+7. **Data and analysis:** [run log](run-log.csv) and raw archive location/custodian; per-run/site-exit data checks; analysis method, limitations and reporting depth; [results summary](results-summary.md). Reuse named owner/due date from item 2.
 
-| Quantity and location | Range/conditions | Dynamic response/bandwidth and sampling rationale | Acceptable uncertainty and basis | Device/install record | Calibration/reference, units/timebase/DAQ settings | Limits |
-| --- | --- | --- | --- | --- | --- | --- |
-| TBD by subsystem + specialist | TBD | TBD; no default rate | TBD for decision | TBD | TBD | TBD |
+## Optional — complex integration
 
-## Optional complexity section
+Use when uncertainty/integration warrants it: bounded feasibility cap/review; staged technical milestones; error budget; synchronization; saturation/dropout; calibration transfer; environment effects; integration dependency owners; configuration freeze/reassessment triggers and recovery. No generic sample rate or accuracy is assumed.
 
-Complete for complex/uncertain integration or explain why inapplicable: bounded feasibility investigation; technical milestones; integration dependencies; resource-manager capacity windows; error budget; synchronization; saturation/dropout detection; calibration transfer; installed end-to-end verification; failure recovery; configuration freeze and reassessment triggers.
+## Optional — elevated operational risk
 
-## Optional elevated safety section
+Complete regardless of technical complexity when justified: detailed hazard assessment, barriers/exclusion zones, communications, emergency/vehicle securing reference, competent clearance owners and preflight checks. Numeric operating/stop limits require an engineering basis; an unfilled template is not a safe operating procedure.
 
-Complete when risk warrants, regardless of technical complexity: specific hazard assessment reference, competent safety owners, barriers/exclusion zones, communications, emergency/vehicle securing procedure, preflight checklist, environmental limits and escalation/resume clearances. Numeric operating/stop limits require engineering basis; placeholders are not authorization.
+## Optional — experiment/comparison design
 
-## Optional DOE / comparisons section
-
-Factors and levels; confounders/controls; run order/randomization if useful; replication rationale; stopping rule; analysis approach; expected evidence precision. Do not impose universal repeats or statistical assumptions.
+Factors/levels; confounders/controls; run order/randomization; replication and precision rationale; stopping rule and analysis approach. Do not impose universal repeats or force a pass/fail threshold on exploratory work.

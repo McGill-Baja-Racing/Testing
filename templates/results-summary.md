@@ -1,15 +1,14 @@
-# Results — comment on the parent test issue
+# Results — parent issue comment
 
-- Test ID / plan revision / run IDs / actual date / configuration:
-- Question and linked DVP&R requirements:
-- Actual method and deviations; conditions:
-- Original raw-data references, run log, calibration/install records, analysis code commit and report link if needed:
-- Data checks, metrics and uncertainty/limitations; evidence sufficiency:
-- Attempt validity: valid / inconclusive / invalid / aborted; reason:
-- Design outcome: PASS / FAIL / not assessed / exploratory finding; criterion and basis (never PASS/FAIL for invalid evidence):
-- Conclusion and intended decision; unresolved objectives:
-- Follow-up issue(s), owner and timing; invalid/inconclusive unresolved objectives require linked follow-up:
-- DVP&R row update(s) and applicability justification; unresolved requirements stay unverified:
-- Analysis owner / agreed due date / completion date:
-- Subsystem lead conclusion approval (identity/date/comment): pending.
-- Testing Manager closure check (identity/date/comment): pending.
+Complete for every attempt; link evidence instead of duplicating a detailed report.
+
+- **Identity:** test ID, plan/configuration revision, actual date, run IDs.
+- **Question and method:** question/requirement links; actual method/conditions and deviations.
+- **Evidence:** original raw recordings, run log, calibration/install versions, analysis code/settings and report if needed.
+- **Findings:** metrics, uncertainty/limitations and sufficient-evidence assessment.
+- **Attempt validity:** valid / inconclusive / invalid / aborted, with reason.
+- **Engineering outcome:** PASS / FAIL only for valid applicable evidence against justified criteria; otherwise not assessed or exploratory finding. State decision and unresolved objectives.
+- **Follow-up and verification:** linked follow-ups for unresolved invalid/inconclusive objectives, owner/timing, DVP&R changes and applicability. Issue closure never implies verification.
+- **Review:** Analysis Owner, agreed due/completion dates; Subsystem Lead approval of interpretation (identity/date/link); Testing Manager completeness/closure check (identity/date/link).
+
+A detailed [report](test-report.md) is required for complex tests; keep the summary and decision index on the original issue. [Closure guide](../docs/guides/closure.md).
