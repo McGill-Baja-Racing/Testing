@@ -16,12 +16,15 @@ You do not need exact sensor models, sampling rates or a finished procedure. Ent
 
 ## What happens next?
 
-1. The request is reviewed for clarity and instrumentation requirements.
-2. Preparation effort and feasibility are assessed.
-3. Managers review priorities and resources.
-4. The test is confirmed only when the necessary preparation and readiness checks are completed.
+1. The Subsystem Lead submits a preliminary testing request.
+2. The request is reviewed for clarity, feasibility and estimated effort; Electronics assesses instrumentation needs.
+3. Managers review priorities and resources and decide whether to approve the request.
+4. The requesting Subsystem Lead and relevant technical teams develop the detailed plan and complete preparation together.
+5. The Testing Manager confirms testing only after required preparation and readiness checks are complete.
 
-The Testing Manager coordinates follow-up. **Submitting an issue does not guarantee testing on the requested date.**
+**Request approval does not mean the test is ready, scheduled or guaranteed for the requested date.** The requesting subsystem remains responsible for its engineering requirements and contributes to preparation. After approval, the Subsystem Lead may be contacted to clarify technical details, develop calibration or validation methods, complete preparation tasks and agree on responsibilities/deadlines. Relevant resource managers confirm capacity before substantial work is committed.
+
+Keep follow-up discussions and preparation updates on the original issue; the Testing Manager coordinates them.
 
 ## Where to see testing requests
 
@@ -29,7 +32,7 @@ Follow requests on the **[Issues page](https://github.com/McGill-Baja-Racing/Tes
 
 - `testing:needs-review` — new request awaiting review.
 - `testing:needs-clarification` — more information is needed.
-- `testing:needs-preparation` — preparation remains before confirmation.
+- `testing:needs-preparation` — approved request still being planned or prepared; not confirmed.
 - `testing:ready` — necessary preparation and readiness checks are complete.
 - `testing:completed` — the request is resolved and its outcome is recorded.
 
