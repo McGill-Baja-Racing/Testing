@@ -1,6 +1,6 @@
 # Reviewing testing requests
 
-The Testing Manager coordinates review with the Subsystem Lead and Electronics Manager. Managers decide priorities and resources. Formal requests come from Subsystem Leads; the form cannot technically verify that role, so confirm it during review.
+The Testing Manager coordinates review with the Subsystem Lead and Electronics Manager. Managers decide priorities and resources.
 
 ## Review the request
 

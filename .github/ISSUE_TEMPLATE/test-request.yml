@@ -1,7 +1,6 @@
 ---
 name: Test Request
-description: Request testing and explain the measurement need. Subsystem Leads submit
-  formal requests.
+description: Request testing and explain the measurement need.
 title: "[TEST] "
 labels:
 - testing:needs-review
@@ -9,7 +8,7 @@ body:
 - type: markdown
   attributes:
     value: |-
-      **This is a preliminary request, not a complete technical test plan.** Only Subsystem Leads submit formal requests. Use a clear issue title; define what you want to learn, the measurements/outputs, proposed method and engineering deadline. Unknown/TBD is welcome for technical details needing help.
+      **This is a preliminary request, not a complete technical test plan.** Use a clear issue title; define what you want to learn, the measurements/outputs, proposed method and engineering deadline. Unknown/TBD is welcome for technical details needing help.
 
       Detailed calibration or validation methods, sampling specifications, sensor models and full procedures are developed later with the requesting subsystem and relevant technical teams when needed. The requesting Subsystem Lead remains involved in preparation updates on this issue.
 
@@ -30,15 +29,24 @@ body:
 - type: input
   id: requirements
   attributes:
-    label: Related requirements (if applicable)
-    description: Link an existing requirement document, ID or section; do not duplicate
-      its content.
+    label: Which existing requirement(s) are you testing or validating?
+    description: Enter the requirement name(s) as listed in the team's existing requirements
+      document. If no requirement applies, write N/A.
 - type: textarea
   id: measurements
   attributes:
     label: What measurements and expected outputs are needed?
     description: Name physical quantities and the result you want to use.
     placeholder: 'For example: Engine speed versus time and a comparison between runs.'
+  validations:
+    required: true
+- type: textarea
+  id: measurement_speed
+  attributes:
+    label: What is the fastest event or change you need to measure, and how did you estimate its duration or frequency?
+    description: Describe the shortest event duration or fastest meaningful variation you
+      want to capture, and explain how you estimated it (calculation, simulation, previous
+      test data, etc.). If unknown, say so.
   validations:
     required: true
 - type: markdown
