@@ -2,21 +2,19 @@
 
 ## What is this repository?
 
-A central place for McGill Baja Racing Subsystem Leads to request testing, communicate measurement needs and coordinate the preparation necessary to obtain useful results. This first release focuses on requests and review.
+A central place for McGill Baja Racing to request testing, communicate measurement needs and coordinate the preparation necessary to obtain useful results. This first release focuses on requests and review.
 
 ## How to request a test
 
 **[Create a Test Request](https://github.com/McGill-Baja-Racing/Testing/issues/new?template=test-request.yml)**
 
-Only **Subsystem Leads** submit formal requests. Other members should bring testing ideas to their Subsystem Lead.
-
-Give the issue a clear title, such as “Measure engine speed during acceleration.” Explain what you want to determine, what to measure and why it matters. Include the vehicle, proposed method/location, known preparation and need-by date (`YYYY-MM-DD`). Link existing requirements where relevant; do not copy them into this repository.
+Give the issue a clear title, such as “Measure engine speed during acceleration.” Explain what you want to determine, what to measure and why it matters. Include the vehicle, proposed method/location, known preparation and need-by date (`YYYY-MM-DD`). Name the existing requirements being tested, or write N/A.
 
 You do not need exact sensor models, sampling rates or a finished procedure. Enter **Unknown** or **TBD** when a technical detail needs help from another team. The Electronics Manager can help clarify instrumentation needs.
 
 ## What happens next?
 
-1. The Subsystem Lead submits a preliminary testing request.
+1. Submit a preliminary testing request.
 2. The request is reviewed for clarity, feasibility and estimated effort; Electronics assesses instrumentation needs.
 3. Managers review priorities and resources and decide whether to approve the request.
 4. The requesting Subsystem Lead and relevant technical teams develop the detailed plan and complete preparation together.
