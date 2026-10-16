@@ -8,11 +8,12 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: "**Subsystem Leads submit formal requests.** Give the issue a clear title
-      describing the test or performance metric. Explain what you need to measure
-      and why; Electronics can help with technical details. Unknown or TBD is welcome
-      for technical details needing help. Submission does not guarantee the requested
-      date or authorize vehicle operation."
+    value: |-
+      **This is a preliminary request, not a complete technical test plan.** Only Subsystem Leads submit formal requests. Use a clear issue title; define what you want to learn, the measurements/outputs, proposed method and engineering deadline. Unknown/TBD is welcome for technical details needing help.
+
+      Detailed calibration or validation methods, sampling specifications, sensor models and full procedures are developed later with the requesting subsystem and relevant technical teams when needed. The requesting Subsystem Lead remains involved in preparation updates on this issue.
+
+      **Managers' approval does not mean ready or scheduled, guarantee the requested date, or authorize vehicle operation.**
 - type: markdown
   attributes:
     value: |-
