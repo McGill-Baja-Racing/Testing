@@ -115,7 +115,7 @@ body:
 - type: input
   id: need_by
   attributes:
-    label: "By when do you need Testing to deliver the raw data?"
+    label: "By when do you need Testing to deliver the raw/unprocessed data?"
     description: "Enter YYYY-MM-DD, or No fixed deadline. Work backward from your analysis deadline using the time estimated above, allowing margin for setbacks. This is the data-handoff date used to plan testing, not the analysis completion date. Explain any different constraint."
   validations:
     required: true
