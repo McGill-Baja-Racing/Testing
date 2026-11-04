@@ -7,72 +7,113 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: |-
-      Explain what you want to learn, what data you need and how you intend to use it. A complete procedure or instrumentation design is not required.
-
-      **Answer as much as you can.** Supporting questions are optional when you need help: write **Unknown / need help** and explain the uncertainty, or leave the field blank. Leads and relevant technical teams can work through these details together. Providing complete, well-supported answers upfront reduces follow-up and improves the chance that testing can be prepared and carried out sooner, subject to priorities, resources and readiness.
-
-      The requesting Subsystem Lead remains involved in planning and preparation on this issue. **Managers' approval does not mean ready or scheduled, guarantee the requested date, or authorize vehicle operation.**
+    value: "Explain the engineering question, requested data and how the results will be used. A complete procedure or instrumentation design is not required.\n\nRequired questions need a response, but technical uncertainty is welcome: write **Unknown / need help** and explain what is unresolved. Leads and relevant technical teams can work through it together. Providing complete, well-supported answers upfront reduces follow-up and improves the chance of testing sooner, subject to priorities, resources and readiness.\n\nThe requesting Subsystem Lead remains involved in planning and preparation on this issue. **Managers' approval does not mean ready or scheduled, guarantee the requested date, or authorize vehicle operation.**"
 - type: textarea
   id: question
   attributes:
-    label: "What engineering question will this test answer?"
-    description: "Describe the problem and the design, tuning, validation or competition decision the results will support. What would you do differently depending on the result? What is the consequence of not testing?"
+    label: "What are you trying to determine?"
+    description: "Explain the engineering question, the decision the results will support and what you would do differently depending on the result."
   validations:
     required: true
-- type: textarea
+- type: input
   id: requirements
   attributes:
     label: "Which existing requirement(s) does this relate to?"
-    description: "Give requirement names from the team's existing requirements document, or N/A."
+    description: "Give names from the team's requirements document, or N/A."
   validations:
     required: false
 - type: textarea
   id: measurements
   attributes:
-    label: "What measurements do you need, and why?"
-    description: "For each quantity, identify the component/location, why it is needed, and whether it is essential or optional. Include expected ranges or required accuracy if known. Mention available or proposed equipment if useful; sensor selection is not required."
+    label: "What measurements are essential, and why?"
+    description: "For each quantity, identify the component/location and why it is needed. List optional extras separately. Include expected minimum/maximum values and accuracy needs if known. Sensor models are not required. If uncertain, explain what needs help."
   validations:
-    required: false
+    required: true
 - type: textarea
   id: processing
   attributes:
-    label: "How will you process the data and calculate the results you need?"
-    description: "Describe the path from measurements to the final result: calculations, comparisons, models or processing steps. Explain how measurements must be combined or synchronized. Equations, sketches and links are welcome. If uncertain, explain what help you need."
+    label: "What will you calculate or compare?"
+    description: "Explain how recorded measurements become the result you need: calculations, comparisons, models or processing steps. Note measurements that must be combined or synchronized. If you need help, explain what is unresolved."
   validations:
-    required: false
+    required: true
 - type: textarea
   id: outputs
   attributes:
-    label: "What output will make the test useful, and how will you judge the result?"
-    description: "Describe the final graph, calculated value, comparison, model input or other deliverable. What finding would support your decision? State a target or acceptance criterion if known, or explain what an exploratory test should characterize."
+    label: "What final result or deliverable do you need?"
+    description: "Name the graph, value, comparison or model input you will use. Explain how you will judge the result; include a target if known, or what an exploratory test should characterize."
   validations:
-    required: false
-- type: textarea
-  id: analysis_owner_timing
+    required: true
+- type: input
+  id: analysis_owner
   attributes:
-    label: "Who will analyse the data, and when are usable results needed?"
-    description: "Name the person or subsystem responsible for processing and interpretation, and support needed. Give the usable-results deadline (YYYY-MM-DD, or an approximate window including the year), the milestone it supports and its flexibility. Allow time for analysis; state an earlier testing deadline if needed."
+    label: "Who will process and interpret the data?"
+    description: "Name a person or subsystem and any support needed, or write Need help assigning."
   validations:
-    required: false
+    required: true
+- type: input
+  id: vehicle
+  attributes:
+    label: "Which vehicle or setup will be used?"
+    description: "Give the vehicle/year, component or bench setup. If undecided, identify the options or help needed."
+  validations:
+    required: true
+- type: dropdown
+  id: location
+  attributes:
+    label: "Proposed location?"
+    description: "If choosing Other, specify it in the testing method."
+    options:
+    - "MEDN"
+    - "Courtyard"
+    - "ENA"
+    - "Other"
+    - "Need help deciding"
+  validations:
+    required: true
 - type: textarea
   id: method
   attributes:
-    label: "What is your proposed testing method?"
-    description: "Identify the vehicle/year, component or bench setup; what will happen; configurations or conditions to compare; proposed location; and approximate duration or number of runs if known. A finished procedure is not required."
+    label: "What is the proposed test method?"
+    description: "Briefly describe what will happen and configurations or conditions to compare. Include duration or number of runs if known. A preliminary idea is enough; if you need help, explain with what."
   validations:
-    required: false
+    required: true
 - type: textarea
   id: measurement_speed
   attributes:
-    label: "What brief events or changes must the measurements capture?"
-    description: "Describe the fastest meaningful event and its approximate duration or frequency, if known, with the basis for your estimate. Say if timing is unimportant. You do not need to select a sampling rate."
+    label: "What brief events or changes must be captured?"
+    description: "Describe the fastest meaningful event, its approximate duration/frequency and the basis for your estimate, if known. Say if timing is unimportant. You do not need to select a sampling rate."
   validations:
     required: false
 - type: textarea
   id: preparation
   attributes:
-    label: "What preparation is needed, and what can your subsystem contribute?"
-    description: "List known repairs, modifications, installation, access/disassembly, fixtures, calibration work and equipment needs. Identify what is available, what your subsystem can prepare and where help is needed. Include availability or scheduling constraints. A complete calibration plan is not required."
+    label: "What preparation remains?"
+    description: "List known repairs, modifications, installation, disassembly, fixtures, equipment or calibration work. State what your subsystem can contribute and where help is needed. Include availability constraints. None known is acceptable; a complete calibration plan is not required."
   validations:
-    required: false
+    required: true
+- type: input
+  id: need_by
+  attributes:
+    label: "When must usable, analysed results be available?"
+    description: "Enter YYYY-MM-DD, or No fixed deadline. Give the latest useful date and allow time after testing for analysis."
+  validations:
+    required: true
+- type: textarea
+  id: date_reason
+  attributes:
+    label: "Why are results needed by that date?"
+    description: "Name the actual decision or milestone (design freeze, order, competition, etc.) and explain what would be delayed or change if results arrived later. Next testing day alone is not an engineering deadline justification. If there is no fixed deadline or this is only a preferred opportunity, say so."
+  validations:
+    required: true
+- type: dropdown
+  id: deadline_flexibility
+  attributes:
+    label: "Can that deadline move?"
+    description: "Choose whether this is a firm constraint or a preference."
+    options:
+    - "Fixed"
+    - "Some flexibility"
+    - "Preferred date only"
+    - "No fixed deadline"
+  validations:
+    required: true
