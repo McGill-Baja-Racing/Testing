@@ -7,7 +7,7 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: "Explain the engineering question, requested data and how the results will be used. A complete procedure or instrumentation design is not required.\n\nRequired questions need a response, but technical uncertainty is welcome: write **Unknown / need help** and explain what is unresolved. Leads and relevant technical teams can work through it together. Providing complete, well-supported answers upfront reduces follow-up and improves the chance of testing sooner, subject to priorities, resources and readiness.\n\nThe requesting Subsystem Lead remains involved in planning and preparation on this issue. **Managers' approval does not mean ready or scheduled, guarantee the requested date, or authorize vehicle operation.**"
+    value: "Explain the engineering question, requested data and how the results will be used. Testing is responsible for collecting the agreed data and handing it over to the requesting subsystem. The requesting subsystem is responsible for processing, analysis and interpretation. Analysis questions below help you plan the measurements and work backward to a raw-data delivery deadline. A complete procedure or instrumentation design is not required.\n\nRequired questions need a response, but technical uncertainty is welcome: write **Unknown / need help** and explain what is unresolved. Leads and relevant technical teams can work through it together. Providing complete, well-supported answers upfront reduces follow-up and improves the chance of testing sooner, subject to priorities, resources and readiness.\n\nThe requesting Subsystem Lead remains involved in planning and preparation on this issue. **Managers' approval does not mean ready or scheduled, guarantee the requested date, or authorize vehicle operation.**"
 - type: textarea
   id: question
   attributes:
@@ -32,22 +32,22 @@ body:
 - type: textarea
   id: processing
   attributes:
-    label: "What will you calculate or compare?"
-    description: "Explain how recorded measurements become the result you need: calculations, comparisons, models or processing steps. Note measurements that must be combined or synchronized. If you need help, explain what is unresolved."
+    label: "How will your subsystem use and analyse the data?"
+    description: "Describe your subsystem's planned analysis after receiving the data: calculations, comparisons, models or processing steps. Note measurements that must be combined or synchronized. If you need help, explain what is unresolved."
   validations:
     required: true
 - type: textarea
   id: outputs
   attributes:
-    label: "What final result or deliverable do you need?"
-    description: "Name the graph, value, comparison or model input you will use. Explain how you will judge the result; include a target if known, or what an exploratory test should characterize."
+    label: "What result will your subsystem produce from the data?"
+    description: "Name the graph, value, comparison or model input your subsystem will produce and use. This describes your analysis goal, not a deliverable expected from Testing. Explain how you will judge the result; include a target if known, or what an exploratory test should characterize."
   validations:
     required: true
 - type: input
   id: analysis_owner
   attributes:
-    label: "Who will process and interpret the data?"
-    description: "Name a person or subsystem and any support needed, or write Need help assigning."
+    label: "Who in your subsystem will own the analysis?"
+    description: "Name the person or group in the requesting subsystem responsible for processing and interpretation. If not assigned, say so and identify who will arrange it. Planning guidance does not transfer analysis responsibility to Testing."
   validations:
     required: true
 - type: input
@@ -92,24 +92,38 @@ body:
   validations:
     required: true
 - type: input
-  id: need_by
+  id: analysis_due
   attributes:
-    label: "When must usable, analysed results be available?"
-    description: "Enter YYYY-MM-DD, or No fixed deadline. Give the latest useful date and allow time after testing for analysis."
+    label: "When must your analysis be finished?"
+    description: "Enter YYYY-MM-DD, or No fixed deadline. This is your subsystem's deadline for interpreted results to support the engineering decision."
   validations:
     required: true
 - type: textarea
   id: date_reason
   attributes:
-    label: "Why are results needed by that date?"
-    description: "Name the actual decision or milestone (design freeze, order, competition, etc.) and explain what would be delayed or change if results arrived later. Next testing day alone is not an engineering deadline justification. If there is no fixed deadline or this is only a preferred opportunity, say so."
+    label: "What makes that analysis deadline necessary?"
+    description: "Name the actual decision or milestone (design freeze, order, competition, etc.) and explain what would be delayed or change if analysis finished later. Next testing day alone is not an engineering deadline justification. If this is only a preference or there is no fixed deadline, say so."
+  validations:
+    required: true
+- type: input
+  id: analysis_duration
+  attributes:
+    label: "How much time will your subsystem need for analysis?"
+    description: "Estimate the elapsed time between receiving the raw data and finishing analysis, allowing for availability and processing work (for example, one week). If uncertain, give a provisional estimate or explain what needs planning."
+  validations:
+    required: true
+- type: input
+  id: need_by
+  attributes:
+    label: "By when do you need Testing to deliver the raw data?"
+    description: "Enter YYYY-MM-DD, or No fixed deadline. Work backward from your analysis deadline using the time estimated above, allowing margin for setbacks. This is the data-handoff date used to plan testing, not the analysis completion date. Explain any different constraint."
   validations:
     required: true
 - type: dropdown
   id: deadline_flexibility
   attributes:
-    label: "Can that deadline move?"
-    description: "Choose whether this is a firm constraint or a preference."
+    label: "Can the raw-data delivery deadline move?"
+    description: "Choose whether the raw-data handoff date is a firm constraint or a preference. Explain any limits in the deadline justification above."
     options:
     - "Fixed"
     - "Some flexibility"
