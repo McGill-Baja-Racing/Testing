@@ -1,0 +1,73 @@
+archive_path,filename,bytes,sha256
+November-8-original-folder/Daq Data/1h test/1h-reconstructed.csv,1h-reconstructed.csv,273685119,ee76d49a6169c883b19d4998139382ff07a067455c927d375fff62562d481ad9
+November-8-original-folder/Daq Data/1h test/1h-reconstructed_graphes.xlsx,1h-reconstructed_graphes.xlsx,66829712,23acf8050b758c27c35dff9b226e6f4b8eadcf49e04b18f2b1083782ec67d324
+November-8-original-folder/Daq Data/1h test/Graphs/01_RPM_roue.png,01_RPM_roue.png,217093,208a9e14cf2177c503ff16a330212bbc8962d4c3475c26bf2ec6278a60751712
+November-8-original-folder/Daq Data/1h test/Graphs/02_RPM_moteur.png,02_RPM_moteur.png,187469,4f7e0a463ff3f2dc1da9878ba09dc40890421be80457d97aa13eb591a20063da
+November-8-original-folder/Daq Data/1h test/Graphs/03_Vitesse_GPS.png,03_Vitesse_GPS.png,297356,a873af20559b2b7b68d6df0aed8666bb3ab56a8c8d5ab42df8e90c4ef3c6a2ce
+November-8-original-folder/Daq Data/1h test/Graphs/04_Parcours_GPS.png,04_Parcours_GPS.png,255433,53e3134fce614a3cf0d9d3fee461f21cc074e69ce953ea2036b0867acfbdb417
+November-8-original-folder/Daq Data/1h test/Graphs/05_Suspension_avant.png,05_Suspension_avant.png,99607,bf0088ba9f038ca5b76bbb69c136933d0d1783ab7725a773495a1407f54a5239
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_18-56-21.bin,log_2026-11-08_18-56-21.bin,10503888,8101001f6f30602b54192a3d4c2465d3d8b2f9a3a8d50b9ad238892f6aab00ee
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_18-56-21.bin.utc,log_2026-11-08_18-56-21.bin.utc,5251944,df106d72d7a2bb10f92f5f2a8c99ac9fafc8ed0dd50be3576138f80c397fc634
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-23-23.bin,log_2026-11-08_19-23-23.bin,480368,e83b537d3ca53b2419ff9ce470fd11354d7666c9fb31a8430230af594888f5db
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-23-23.bin.utc,log_2026-11-08_19-23-23.bin.utc,240184,f0c337c3dc785717e376303b57018ed4abab77a65227c919b33298f57adc1c3b
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-24-48.bin,log_2026-11-08_19-24-48.bin,2237520,ed1a24c3c5a6b5a4ca854fae0152455ae7dcc9195f33490bd58a94b53a282306
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-24-48.bin.utc,log_2026-11-08_19-24-48.bin.utc,1118760,9026792ca5889a5203df6524c9be8f97eb39932cad5f27ce7e1afcd9ecbd55b0
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-30-40.bin,log_2026-11-08_19-30-40.bin,82192,d86ef7a669703e9480f5bd8d222863f2b6e24488ce5d59ac2a5c7ec1c638c8dc
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-30-40.bin.utc,log_2026-11-08_19-30-40.bin.utc,41096,fbf9e8514f3a75c35451c8c43321019280af3c5b450e117f1c0898bb747e164b
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-31-10.bin,log_2026-11-08_19-31-10.bin,9127776,debac2b02b085a1ff7be11ef91d56b26a1db9647be242b46b3fded0ec38120ed
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_19-31-10.bin.utc,log_2026-11-08_19-31-10.bin.utc,437856,8c213bf78dfd5fe4b10f97e95bc280bde10c62b7ca6dba9f7c300efd487957d1
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_20-14-08.bin,log_2026-11-08_20-14-08.bin,24592,95f5dc34cfa06e8460286df81554ed276e8c28db4c4728a4a6440a756fd2012e
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_20-14-08.bin.utc,log_2026-11-08_20-14-08.bin.utc,12296,c54ce1616ce32590272fb46bc4d49aa0640d09532be792630e5b757053cd52e2
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_20-18-48.bin,log_2026-11-08_20-18-48.bin,26528,59e5503efb6109fbc2fb7dfc59fd140423d4ad30431f3891d50613fee2fde36f
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/log_2026-11-08_20-18-48.bin.utc,log_2026-11-08_20-18-48.bin.utc,13264,51690f8a3a91b5f17971bc65bf99d4420092b451c17d9461bc978ac0af8980d2
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/testing-endurance-1h.bin,testing-endurance-1h.bin,2016336,ee58e029d7b12844ffa453b2cbbd8e8406899e68e245a569e425305674d4a03f
+November-8-original-folder/Daq Data/1h test/Raw data/binaries/testing-endurance-1h.bin.utc,testing-endurance-1h.bin.utc,1008168,b4ff4579fffef82f04163a098ccd5047f9a814d14b472771ac25f1377cb09ef6
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_18-56-21.csv,log_2026-11-08_18-56-21.csv,53553477,3afbc7a5d366c653d217b310476dbff4ce1643c72bfbb0aec380005707d3ccda
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_19-23-23.csv,log_2026-11-08_19-23-23.csv,2342682,5cf833a8ed463a09f42dc4cf70bc5247c80bdb681ccd14ac9cef0231c216667b
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_19-24-48.csv,log_2026-11-08_19-24-48.csv,11163296,8a50b79f26cd65ba2a74554cf438d47dec15b58e62bb4cce8e12ed2110a56cc8
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_19-30-40.csv,log_2026-11-08_19-30-40.csv,395022,1102a1c975f8faf210690f6506e1e6a51b69b7f3b8dc39caab03fb43d3d7fe35
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_19-31-10.csv,log_2026-11-08_19-31-10.csv,46573017,0b59e7e17e410cabe9e44b04fa1190501837e788df80ec52462d2ce76bb104a8
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_20-14-08.csv,log_2026-11-08_20-14-08.csv,148984,76353a8cbbc7b9c4b1cf66e01f61353067c9b76e84394cc8576dae6c8fbbbaa2
+November-8-original-folder/Daq Data/1h test/Raw data/log_2026-11-08_20-18-48.csv,log_2026-11-08_20-18-48.csv,137297,33d5d488b5b434979d5b76faee9d437b682b41b742b8a8da8a3496126205917c
+November-8-original-folder/Daq Data/1h test/Raw data/testing-endurance-1h.csv,testing-endurance-1h.csv,10373763,46720f46583460b08867510a29b472a82b91e4097140633fcd288f856f25ea9a
+November-8-original-folder/Daq Data/20min test/01_RPM_roue.png,01_RPM_roue.png,248050,9d5f1466a6fd60ef6a813a92bc695a3a078c43025d93847da59e3b7cac9cdd77
+November-8-original-folder/Daq Data/20min test/02_RPM_moteur.png,02_RPM_moteur.png,211055,ed8bccf80ed2c8003e3f7553c644f8c5fcf8ac45e7604fe065970770299485c2
+November-8-original-folder/Daq Data/20min test/03_Vitesse_GPS.png,03_Vitesse_GPS.png,299494,a1d41fbe681ec626ed9713d1d7fb97a662b0d729b23ef2253c5e03cac9102442
+November-8-original-folder/Daq Data/20min test/04_Parcours_GPS.png,04_Parcours_GPS.png,278647,c5fb968e753053307e9f5238f1a1e8efa14f9f879467680a95ada741ee07d489
+November-8-original-folder/Daq Data/20min test/05_Suspension_avant.png,05_Suspension_avant.png,78167,5d18e0ccbb6027ab8bc7e49630b7f2f78fecda87c67e952c6c2c65e99e885796
+November-8-original-folder/Daq Data/20min test/log_2026-11-08_16-55-58.csv,log_2026-11-08_16-55-58.csv,28816711,0f03da6905b08435b99ac565e40fabf9edc8be2ad21ed7aa22854f14b6299849
+November-8-original-folder/Daq Data/20min test/testing-endurance-10min.csv,testing-endurance-10min.csv,11186264,a256363cd2108d679a08384650ada2a929798ec2e5bbbf063cd655f331b2be6d
+November-8-original-folder/Daq Data/20min test/testing-endurance-20min_graphes.xlsx,testing-endurance-20min_graphes.xlsx,51729292,11dcfea0e415faa85cc0dc524907d3f6cb5fcbbbfd0dea01d302f0dfc4525700
+November-8-original-folder/Daq Data/Baja_DAQ_10min_graphes.xlsx,Baja_DAQ_10min_graphes.xlsx,2227071,8c74e397b602c5140b1cb7d7cab4ffce0f7a9be51017033e7647ef8bacadc268
+November-8-original-folder/Daq Data/testing-endurance-10min.csv,testing-endurance-10min.csv,11186264,a256363cd2108d679a08384650ada2a929798ec2e5bbbf063cd655f331b2be6d
+November-8-original-folder/Daq Data/testing-endurance-starting-test.csv,testing-endurance-starting-test.csv,16445584,cd964c9ef471ab086d1e4bd5ab882d61f771ff366d3bbfb4a60f069f95fc9683
+November-8-original-folder/Strain Gauge Data/10min_parallel_run_1.csv,10min_parallel_run_1.csv,5243802,b483b70c4d96b3b7453d34bed5faffb781006dd3e3c4fdbc10a6657faa9591df
+November-8-original-folder/Strain Gauge Data/1hour_paralel_run.csv,1hour_paralel_run.csv,48716742,b31fe3c26deb7f17a19af3c21f9d2c3dfc3969a6e1da1d8303126cf078c42342
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_FD0246_TIEROD_5PT_OLS_LINEAR_REGRESSION.tcf,BENCH_ONLY_FD0246_TIEROD_5PT_OLS_LINEAR_REGRESSION.tcf,1434,21c2fb2b6068519ac833807c5448b874d4f518e2aafc4e55fbc664dc767dcb7a
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_FD02A7_CAL2_CAL3_POOLED_LINEAR_REGRESSION.tcf,BENCH_ONLY_FD02A7_CAL2_CAL3_POOLED_LINEAR_REGRESSION.tcf,1429,b26f3731f48e6142bfa36371c3da2bd008b362f8b36a89b1ebbb548309884a1a
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_LHS_FD23DC_CORRECTED_AT_100Nm_ORIGINAL_READS_115Nm.tcf,BENCH_ONLY_LHS_FD23DC_CORRECTED_AT_100Nm_ORIGINAL_READS_115Nm.tcf,1432,f1a81db044649c130a9e0fc255bef62b367f4795983460594a274d1cc260be21
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_LHS_FD23DC_ZERO_ANCHORED_5PT_REGRESSION_DRIVE_POSITIVE.tcf,BENCH_ONLY_LHS_FD23DC_ZERO_ANCHORED_5PT_REGRESSION_DRIVE_POSITIVE.tcf,1420,28ba9c85ca7cc111722b6ba44c324b54143c31a4d700940b11fcb5af87ac8f2f
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_RHS_FD6ECD_GAIN_CORRECTED_50READ60_100READ120_BATTLOW_2p2 (1).tcf,BENCH_ONLY_RHS_FD6ECD_GAIN_CORRECTED_50READ60_100READ120_BATTLOW_2p2 (1).tcf,1435,304c11e6556ffbf4c8a347499187238597239e9d292a1a01e1a809d675afbb1f
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_RHS_FD6ECD_GAIN_CORRECTED_50READ60_100READ120_BATTLOW_2p2.tcf,BENCH_ONLY_RHS_FD6ECD_GAIN_CORRECTED_50READ60_100READ120_BATTLOW_2p2.tcf,1435,304c11e6556ffbf4c8a347499187238597239e9d292a1a01e1a809d675afbb1f
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/BENCH_ONLY_RHS_FD6ECD_ZERO_ANCHORED_5PT_REGRESSION_DRIVE_POSITIVE.tcf,BENCH_ONLY_RHS_FD6ECD_ZERO_ANCHORED_5PT_REGRESSION_DRIVE_POSITIVE.tcf,1421,b093bd4dc387f2601f57f0bf31235e12bf2b0fb6ca311a5c11b1662fb025adba
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/FLCA_calibrated_26.10.26_BestFit.tcf,FLCA_calibrated_26.10.26_BestFit.tcf,1391,b87479f76378ffdb2911d2858f2102045a94f14dd52df0f3879e8f72e7f86f57
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/LHS_Spare.tcf,LHS_Spare.tcf,1450,6264ce409cb3634bb292720f973688d81b4e35e1ab0b4560379d05be2bfeaa20
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/Oct27KnuckleCalibration_BestFit.tcf,Oct27KnuckleCalibration_BestFit.tcf,1411,108e8d2d6588dbb15f5a6516d57a48af46d5026367843a7b156d3101d1a67176
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/RHS_Spare.tcf,RHS_Spare.tcf,1467,d048c44a94717ca4e76f23f1741fa283ab1d987ac8e907e9ef9618b687c630ed
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/Steering_Column_Calibration.tcf,Steering_Column_Calibration.tcf,1504,17efdfa5e6c39f099d1a42020511e92fc61b328c89063a26f89acf167fb791fc
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/Steering_Column_Calibration_2.tcf,Steering_Column_Calibration_2.tcf,1502,8206b9fb0f263f9fa949fc07e6b7f8eeab36db121c4d560c6d0cbf028def462b
+November-8-original-folder/Strain Gauge Data/Mantracourt Calibration Files/Steering_Column_Calibration_3.tcf,Steering_Column_Calibration_3.tcf,1486,7c42c503a6c7c7af8ebbb2e8a55f714500a1504f8e48b89ed80f7a929857077f
+November-8-original-folder/Strain Gauge Data/README.txt,README.txt,127,2a76352cbeb93e2d5cae2879ea7d072342b181e0a04e67bd2b5a00a5b5a0ca0c
+November-8-original-folder/Strain Gauge Data/night_ack_run.csv,night_ack_run.csv,21658438,ef3a02c66f0e4b2ada179020663a9f60067c620cbe568cf94ac24b8cf54265df
+November-8-original-folder/Strain Gauge Data/test.csv,test.csv,1090718,2412a527118b6e987918b6a81d2a28e8f6ff9e925580f38510f58897a614fe39
+Additional-supplied-files/1h_parellel_run.csv,1h_parellel_run.csv,45981017,eb3bc8c1bf92265d394debd42f3e3bfd7edf8d9fee60527d67edbc4a52f2d68a
+Additional-supplied-files/10min_parellel_run1 1.csv,10min_parellel_run1 1.csv,9783057,d2f51858418d8fae204e7c0bf2a2c5a99355a47f5ab950e11e32cc1bd9d3d66e
+Additional-supplied-files/20min_parellel_run1 1.csv,20min_parellel_run1 1.csv,2800978,7bf525fe974fac4c83db1a7b3a6d28c6bd805f3dcc4add5a785c33152e27c23d
+Additional-supplied-files/20min_parellel_run2 1.csv,20min_parellel_run2 1.csv,8227319,df6be9e754193048c5990a49bfa89acf949d5e60f90ad3e8bfabe4b7fadbff87
+Additional-supplied-files/night_ack_run_2.csv,night_ack_run_2.csv,28028527,cc8ba4e43ef7e0bf3e7b25b7bbf9e067fa186b7417ee3369aa71939047a765ea
+Additional-supplied-files/night_ack_run_3.csv,night_ack_run_3.csv,2531169,79791043c4887458696768f7b3602e4933c3777dcafa5ae8695025cac4cffdce
+Additional-supplied-files/night_ack_run.csv,night_ack_run.csv,3715240,91f3e9be4b51e404ae9fe4f46cfc6c042d5e88946643689664b622dcb053c46e
+Additional-supplied-files/ENA Nov 1st - SSB.xlsx,ENA Nov 1st - SSB.xlsx,19259,436152e8338d2a9430cecee71871ab220ecdccc2d1e20b5f2a053fad81953b31
+Additional-supplied-files/Testing_Mastersheet_FALL26-WIN27.xlsx,Testing_Mastersheet_FALL26-WIN27.xlsx,43401,541f256a58adf2241916cf562ad27294996def86b94f29834efffa4c77385983
+Additional-supplied-files/Mantracourt_T24_Recalibration_2026-11-08_Git_Package.zip,Mantracourt_T24_Recalibration_2026-11-08_Git_Package.zip,346948,e2d2cba6e067438be3672976a207784f5eaed6a7ad08ebef828729db6bde80ac
+Additional-supplied-files/OtherData.zip,OtherData.zip,52323745,8a2a21408b54a108f35b421cafe152876b92bde66919641161deebb722fd8c3f

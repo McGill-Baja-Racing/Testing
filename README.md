@@ -39,3 +39,7 @@ Follow requests on the **[Issues page](https://github.com/McGill-Baja-Racing/Tes
 - `testing:needs-data` — testing is done but data has not yet been delivered. It can accompany `testing:completed`; keep the issue open until handoff is recorded.
 
 See the short [request tracking guide](docs/request-tracking.md) for reviewer responsibilities. Labels summarize progress; they do not authorize vehicle operation.
+
+## Recorded testing data
+
+- [ENA — November 1 and 8, 2026: DR handoff and original files](data/ENA-2026-11-01_08/README.md)
