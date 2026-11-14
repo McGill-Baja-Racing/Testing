@@ -42,4 +42,5 @@ See the short [request tracking guide](docs/request-tracking.md) for reviewer re
 
 ## Recorded testing data
 
-- [ENA — November 1 and 8, 2026: DR handoff and original files](data/ENA-2026-11-01_08/README.md)
+- [ENA — November 1, 2026](data/2026-11-01/README.md)
+- [ENA — November 8, 2026](data/2026-11-08/README.md)
