@@ -11,3 +11,5 @@ Both workbooks use Session, Original files, Absolute time (Montreal), Session ti
 Half-shaft units remain provisional: imperial wrench scale, lb·ft versus lb·in to confirm. Night LHS from night_ack_run_2.csv is unreliable; night_ack_run_3.csv has sparse LHS coverage. No night DAQ recording. Gearbox-bearing RPM ends around 14:54:40 Montreal time.
 
 [Session plots](plots/) show the actual recorded coverage. The video link will be added after sharing through Teams.
+
+Graph shading: **yellow** on RPM/GPS panels means clock time is estimated after the last recorded GPS time; sensor values remain recorded. **Red** on the night LHS plot marks file 2 for review because its near-flat section is unreliable. **Grey** marks the end of gearbox-bearing coverage.
