@@ -8,6 +8,7 @@ Shared measurements for MB26 testing. Each workbook is stored once here; testing
 | [Half-shafts](Half_shafts.xlsx?raw=true) | Native LHS/RHS samples; one sheet per session, including night. |
 | [Front-left suspension](Front_left_suspension.xlsx?raw=true) | Native lower-arm bending and knuckle responses. |
 | [Tie rod](Tie_rod.xlsx?raw=true) | Native parallel and night Ackermann readings; on-site offset/reliability note in [tie-rod review](Tie_rod.md). |
+| [Steering column](Steering_column.xlsx?raw=true) | Native parallel and night Ackermann readings on the lb pull calibration scale; [calibration note and figures](Steering_column.md). |
 | [Body response](Body_response.xlsx?raw=true) | Separate AiM motion and native DAQ left-rear shock/GPS sheets. |
 | [Maneuverability motion / GPS](Motion_GPS.xlsx?raw=true) | Retained post-night slalom windows; one sheet per window. |
 | [Maneuverability activity index](Activity_index.xlsx?raw=true) | Matching source recordings and elapsed-time windows. |
